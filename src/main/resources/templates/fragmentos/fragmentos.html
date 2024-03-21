@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>Sistema de Gerenciamento de Alunos</title>
+    <meta name="author" content="Julius Cavalcante">
+    <link rel="stylesheet" href="css/NavBar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+    <body>
+    <!-- Navigation bar  -->
+    <header th:fragment="cabecalho">
+        <nav>
+			<!-- logo -->
+            <div class="ajustaLogo">
+                <img src="img\logo.jpg" alt="Logo" class="logoImg">
+                <a class="logo" th:href="@{/index}">ConstruMath</a>
+            </div>
+			<!-- fim logo -->
+			<!-- Botão Mobile -->
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
+            </div>
+			<!-- Botão Mobile -->
+			<!-- Lista de abas -->
+            <ul class="nav-list">
+                <!--  Links para proximas pag  -->
+                <li><a th:href="@{/index}" class="active">Home</a></li>
+                <li><a href="#">O que quer construir?</a></li>
+                <li><a href="#">Lista de Materiais</a></li>
+                <li><a href="#">Calculadora</a></li>
+            </ul> 
+			<!-- Fim Lista de abas -->
+        </nav>
+    </header>
+    <!-- End navigation bar -->
+    <!-- Footer -->
+    <footer th:fragment="rodape">
+        <div class="rodape">
+            <span>Todos os Direitos Reservados - 2022 &copy; Gustavo Oliveira Viana</span>
+        </div>
+    </footer>
+
+        <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
