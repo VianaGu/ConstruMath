@@ -1,7 +1,10 @@
 O que precisa?
-Tijolos
-Cimento 
-Areia 
-Cal
-Brita
-Argamassa
+Tijolos(id, nome, altura, largura, comprimento, valorMedio)
+Cimento(id, nomeMarca, peso, valorMedio)
+Areia(id, tipo, valorMedio)
+Cal(id, nomeMarca, valorMedio)
+Brita(id, tamanho, valorMedio)
+Argamassa(id, tipo, valorMedio)
+Gesso(id, tipo, valorMedio)
+Telha(id, tipo, largura, altura, valorMedio)
+
