@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root{
-	--color-bg:#4AC7E0;
-	--color-bg-box:#4DD0EB;
+	--color-bg:#99d3df;
+	--color-bg-box:#99d3df;
 	--color-text:#381EF7;
 	--colorNav: #004A8D;
 	--textColor: #fff;
@@ -21,7 +21,7 @@ body{
 .box {
 	background: var(--color-bg-box);
 	width: 60vw;
-	height: 93vh;
+	height: 80vh;
 	overflow-Y: hidden;
 	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 }
