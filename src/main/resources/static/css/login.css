@@ -29,3 +29,16 @@ border: 2px solid #d4d4d4;}
     height: 40px;
     width: 50%;
 }
+span.error {
+    
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    color:white;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+span.error.active {
+    border: 1px solid red;
+    padding: 0.4em;
+}
