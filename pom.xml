@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>br.com</groupId>
-    <artifactId>gerenciamento-alunos</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>gerenciamento-alunos</name>
-    <description>sistema-de-gerenciamento-de-alunos</description>
+    <artifactId>ConstruMath</artifactId>
+    <version>1.0.0</version>
+    <name>Calculadora de materiais</name>
+    <description>sistema-de-calculo-de-material</description>
     <properties>
         <java.version>17</java.version>
     </properties>

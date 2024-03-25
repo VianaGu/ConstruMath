@@ -33,6 +33,16 @@ body{
 	color:var(--color-text);
 	font-family: cambria;
 }
+.ptCreditos{
+	display: flex;
+	justify-content: space-evenly;
+}
+a.name{
+	color: black;
+}
+a.name:hover{
+	color: rgb(5, 139, 0);
+}
 .creditos{
 	list-style: none;
 	position:relative;
@@ -64,18 +74,6 @@ footer {
   width: 100%;
   height: 2.5rem;            /* altura do rodapé */
 }
-
-@media (max-width: 1200px){
-.container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1353px;
-}
-}
-@media (min-width: 992px){
-.container, .container-lg, .container-md, .container-sm {
-    max-width: 1102px;
-}
-}
-
 .rodape{
 	height: 5vh;
 }
