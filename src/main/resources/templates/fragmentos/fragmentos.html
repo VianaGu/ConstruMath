@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <title>Sistema de Gerenciamento de Alunos</title>
+    <title>ConstruMath</title>
     <meta name="author" content="Julius Cavalcante">
     <link rel="stylesheet" href="css/NavBar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
@@ -30,9 +30,8 @@
             <ul class="nav-list">
                 <!--  Links para proximas pag  -->
                 <li><a th:href="@{/index}" class="active">Home</a></li>
-                <li><a href="#">O que quer construir?</a></li>
-                <li><a href="#">Lista de Materiais</a></li>
-                <li><a href="#">Calculadora</a></li>
+                <li><a th:href="@{/oQueConstruir}">O que quer construir?</a></li>
+                <li><a th:href="@{/materiais}">Lista de Materiais</a></li>
             </ul> 
 			<!-- Fim Lista de abas -->
         </nav>

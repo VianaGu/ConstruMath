@@ -41,6 +41,19 @@ public class UsuarioController {
         modelAndView.addObject("aluno", new Aluno());
         return modelAndView;
     }
+    
+    @GetMapping("/materiais")
+    public ModelAndView materiais() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("Materiais/materiais");
+        return modelAndView;
+    }
+    @GetMapping("/oQueConstruir")
+    public ModelAndView Construir() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("OQueConstruir/oQueConstruir");
+        return modelAndView;
+    }
 
     @GetMapping("/cadastro")
     public ModelAndView cadastrar() {
