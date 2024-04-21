@@ -31,45 +31,49 @@
                 <li><a th:href="@{/index}" >Home</a></li>
                 <li><a th:href="@{/oQueConstruir}" >O que quer construir?</a></li>
                 <li><a th:href="@{/materiais}" class="active">Lista de Materiais</a></li>
+                <li><a th:href="@{/calculadora}">Calculadora</a></li>
             </ul> 
 			<!-- Fim Lista de abas -->
         </nav>
     </header>
     <!-- End navigation bar -->
-    
-	<!-- Quadrado de apresentação dos integrantes -->
-    <div class="container">
-        <h3>Últimos Materiais adicionados</h3>
-        <hr>
+    <body>
+        <!-- Quadrado de apresentação dos integrantes -->
+        <div class="container">
+            <h3>Últimos Materiais adicionados</h3>
+            <hr>
 
-        <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover">
 
-        <thead>
-            <th scope="col">Nome</th>
-            <th scope="col">Quantidade</th>
-            <th scope="col">Preço</th>
-        </thead>
-        <tbody>
-            <tr scope="row" th:each="item : ${itemList}">
+            <thead>
+                <th scope="col">Nome</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Preço</th>
+            </thead>
+            <tbody>
+                <tr scope="row" th:each="item : ${itemList}">
 
-                <td th:text="${item.nome}"></td>
-                <td th:text="${itemq.uantidade}"></td>
-                <td th:text="${item.preco}"></td>
-                <td>
-                 <a class="btn btn-primary" th:href="@{editar/{id}(id=${item.id})}">
-                 <i class="bi bi-pencil-square"></i> Editar</a>
+                    <td th:text="${item.nome}"></td>
+                    <td th:text="${itemq.uantidade}"></td>
+                    <td th:text="${item.preco}"></td>
+                    <td>
+                    <a class="btn btn-primary" th:href="@{editar/{id}(id=${item.id})}">
+                    <i class="bi bi-pencil-square"></i> Editar</a>
 
-                 <a class="btn btn-danger" th:href="@{remover/{id}(id=${item.id})}">
-                 <i class="bi bi-x-square"></i> Remover</a>
+                    <a class="btn btn-danger" th:href="@{remover/{id}(id=${item.id})}">
+                    <i class="bi bi-x-square"></i> Remover</a>
 
-                </td>
-            </tr>
-        </tbody>
-        </table>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+            <button id="gerarPDF">Download em pdf</button>
+
         </div>
-
+    </body>
     <a href="#" id="linkTopo">&#9650;</a>
     <script src="js/mobile-navbar.js"></script>
 	<link rel="stylesheet" href="css/NavBar.css">
+    <link rel="stylesheet" href="css/style.css">
 </body>
 </html>

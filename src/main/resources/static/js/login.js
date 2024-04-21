@@ -18,7 +18,7 @@ function ValidateField(field) {
     function customMessage(typeError) {
         const messages = {
             text: {
-                valueMissing: "Quem é você?"
+                valueMissing: "Usuário Inválido"
             },
             password: {
                 valueMissing: "Não se esqueça da senha"

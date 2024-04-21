@@ -51,7 +51,7 @@ public class UsuarioController {
     @GetMapping("/oQueConstruir")
     public ModelAndView Construir() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("OQueConstruir/oQueConstruir");
+        modelAndView.setViewName("OQueConstruir/oqueconstruir");
         return modelAndView;
     }
 

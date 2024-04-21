@@ -1,5 +1,12 @@
 @charset "UTF-8";
-{margin: 0; padding: 0px; box-sizing: border-box;}
+:root{
+	--color-bg:#99d3df;
+	--color-bg-box:#99d3df;
+	--color-text:#381EF7;
+	--colorNav: #004A8D;
+	--textColor: #fff;
+}
+
 a.btn-nav{height: 40px; color: #ffffff;}
 a{cursor: pointer; font-weight: bold;}
 a.btn-nav:hover{color: #7fdce8;}
@@ -8,8 +15,9 @@ a.btn-nav:hover{color: #7fdce8;}
 
 .neo-section{
     min-height: 820px;
-    background-size: cover !important;
-    background-position: center;
+    margin: 0; 
+    padding: 0px; 
+    box-sizing: border-box;    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     padding: 40px;
@@ -31,6 +39,10 @@ a.btn-nav:hover{color: #7fdce8;}
 .rodape{color: #ffffff; background-color: #7fdce8; text-align: center; font-size: 0.80em;}
 .wm a{text-decoration: none;}
 .d-grid{font-weight: bold; padding-top: 20px; text-align: center}
+
+body{
+    background-color: var(--color-bg);
+}
 
 @media screen and (max-width: 667px) {
 
