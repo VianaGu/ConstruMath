@@ -1,0 +1,81 @@
+@charset "UTF-8";
+:root{
+	--color-bg:#99d3df;
+	--color-bg-box:#99d3df;
+	--color-text:#381EF7;
+	--colorNav: #004A8D;
+	--textColor: #fff;
+}
+body{
+	background: var(--color-bg);
+}
+.container {
+	width: 100%;
+	height: 93vh;
+	background: var(--color-bg);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.box {
+	background: var(--color-bg-box);
+	width: 60vw;
+	height: 80vh;
+	overflow-Y: hidden;
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+.apresenteSite{
+	font-size: 24px;
+	
+	letter-spacing: 4px;
+	text-align:center;
+	color:var(--color-text);
+	font-family: cambria;
+}
+.ptCreditos{
+	display: flex;
+	justify-content: space-evenly;
+}
+a.name{
+	color: black;
+}
+a.name:hover{
+	color: rgb(5, 139, 0);
+}
+.creditos{
+	list-style: none;
+	position:relative;
+	padding-left: 15px;
+	bottom:0;
+
+}
+body {
+margin: 0px;
+}
+#linkTopo {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--colorNav);
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+	box-shadow: 0px 5px 4px rgba(50, 50, 50, 0.77);
+  }
+img{
+	margin-left:17%;
+	width:63%
+}
+footer {
+  position: relative;
+  top:1px;
+  width: 100%;
+  height: 2.5rem;            /* altura do rodapé */
+}
+.rodape{
+	height: 5vh;
+}
+
+
