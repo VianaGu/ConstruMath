@@ -34,9 +34,9 @@ include('../verifica_login.php');
                 <!--  Links para proximas pag  -->
                 <li><a href="painel.php" class="active">Home</a></li>
                 <li><a href="../oQueConstruir/oQueConstruir.php">O que quer construir?</a></li>
-                <li><a href="materiais">Lista de Materiais</a></li>
-                <li><a href="calculadora">Calculadora</a></li>
-                <li><a href="logout.php">Sair</a></li>
+                <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
+                <li><a href="../calculadora/calculadora.php">Calculadora</a></li>
+                <li><a href="../logout.php">Sair</a></li>
             </ul> 
 			<!-- Fim Lista de abas -->
         </nav>
@@ -66,7 +66,7 @@ include('../verifica_login.php');
 						<li><a href="#" target="blank" class="name">Eduardo Augusto</a></li>
 					</ul>
 					<ul class="creditos">
-						<li><a href="#" target="blank" class="name">Mano Novo</a></li>
+						<li><a href="#" target="blank" class="name">Deivid</a></li>
 						<li><a href="#" target="blank" class="name">Fabricio</a></li>
 						<li><a href="#" target="blank" class="name">Juan</a></li>
 					</ul>
@@ -75,7 +75,7 @@ include('../verifica_login.php');
 		</main>
 	</div>
 	<a href="#" id="linkTopo">&#9650;</a>
-	<script src="js/mobile-navbar.js"></script>
+	<script src="../js/mobile-navbar.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 </body>
 </html>
