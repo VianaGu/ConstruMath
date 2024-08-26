@@ -1,0 +1,34 @@
+div.navbar{
+    overflow: hidden;
+    background-color: #ccc;
+    position: fixed;
+    top:0;
+    width: 100%;
+    box-shadow: 5px, 5px, black;
+}
+div.navbar a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div.navbar a.right{
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div.navbar img{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px  16px;
+    text-decoration: none;
+}
