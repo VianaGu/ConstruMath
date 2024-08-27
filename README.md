@@ -36,5 +36,5 @@ Para rodar o site:
 <br>
 3.Inicie um servidor apache com xampp ou wampp
 <br>
-4.Abra seu navegador e entre em <a>localhost/</a>
+4.Abra seu navegador e entre em 'localhost/'
 
