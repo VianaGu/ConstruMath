@@ -30,11 +30,11 @@ Cor da NavBar = #004A8D
 <br>
 Para rodar o site:
 <br>
-1.abra o cmd
+1.Abra o administrador de banco de dados do seu computador 
 <br>
-2.vá até a pasta onde encontra-se os arquivos
+2.Abra o arquivo <a href="./testes/CriarDatabase.sql">Criar Database </a> e rode no seu  
 <br>
-3.e rode o comando ./mvnw spring-boot:run
+3.Inicie um servidor apache com xampp ou wampp
 <br>
-4.Abra seu navegador e entre em 'localhost:8080/'
+4.Abra seu navegador e entre em <a>localhost/</a>
 
