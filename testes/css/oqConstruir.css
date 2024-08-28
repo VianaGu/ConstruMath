@@ -1,0 +1,30 @@
+body {
+    font-family: 'Handlee', cursive; /* Exemplo de fonte personalizada */
+    margin: 0;
+    padding: 0;
+}
+
+.cntflex {
+    display: flex; /* Utilizando flexbox para alinhar as divs lado a lado */
+    justify-content: center; /* Centralizando horizontalmente as divs dentro da section */
+    align-items: flex-start; /* Alinhando no topo */
+    padding: 20px;
+}
+
+.op1, .op2 {
+    width: 45%; /* Definindo largura para cada div */
+    margin: 0 10px; /* Espaçamento entre as divs */
+    padding: 10px;
+    border: 10px solid #ccc; /* Exemplo de borda para visualização */
+}
+
+@media (max-width: 768px) {
+    .cntflex {
+        flex-direction: column; /* Em telas menores, empilha verticalmente */
+    }
+
+    .op1, .op2 {
+        width: 100%; /* Nas telas menores, ocupam toda a largura */
+        margin: 10px 0; /* Espaçamento entre as divs */
+    }
+}

@@ -61,22 +61,30 @@ include("../verifica_login.php");
         </nav>
     </header>
     <!-- End navigation bar -->
-      <!-- Autor Gabriel caleffo -->
-     <form method="post" action="">
-        <label for="campo1">O que Pretende Construir?: </label>
-        <input type="text" id="campo1" name="campo1" onkeyup="verificarCampo()" placeholder="Parede, Piso ou Laje?">
-        <br><br>
-        <div id="campo2" style="display:none;">
-            <label for="campo2">Tem portas?: </label>
-            <input type="text" name="campo2">
+    <section class="cntflex">
+        <div class="op1">
+            <!-- Autor Gabriel caleffo -->
+            <form method="post" action="">
+                <label for="campo1">O que Pretende Construir?: </label>
+                <input type="text" id="campo1" name="campo1" onkeyup="verificarCampo()" placeholder="Parede, Piso ou Laje?">
+                <br><br>
+                <div id="campo2" style="display:none;">
+                    <label for="campo2">Tem portas?: </label>
+                    <input type="text" name="campo2">
+                </div>
+                <div id="campo3" style="display:none;">
+                    <label for="campo3">Quantas Portas?: </label>
+                    <input type="text" name="campo3">
+                <br><br>
+                <input type="submit" value="Quantidade Material">
+                </div>
+            </form>
+            <!-- Autor Gabriel caleffo -->
         </div>
-		<div id="campo3" style="display:none;">
-			<label for="campo3">Quantas Portas?: </label>
-			<input type="text" name="campo3">
-        <br><br>
-        <input type="submit" value="Quantidade Material">
-    </form>
-     <!-- Autor Gabriel caleffo -->
+        <div class="op2">
+            teste
+        </div>
+    </section>
     <a href="#" id="linkTopo">&#9650;</a>   
     <script src="../js/mobile-navbar.js"></script>    
 </body>
