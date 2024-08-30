@@ -1,5 +1,4 @@
 body {
-    font-family: 'Handlee', cursive; /* Exemplo de fonte personalizada */
     margin: 0;
     padding: 0;
 }
@@ -15,7 +14,6 @@ body {
     width: 45%; /* Definindo largura para cada div */
     margin: 0 10px; /* Espaçamento entre as divs */
     padding: 10px;
-    border: 10px solid #ccc; /* Exemplo de borda para visualização */
 }
 
 @media (max-width: 768px) {
