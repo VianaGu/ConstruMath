@@ -16,10 +16,7 @@ include("../verifica_login.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Autor Gabriel caleffo -->
     <script>
-        /* var temPorta = document.getElementById('campo2').value; */
-        var qtd = document.getElementById('campo3');
-        var alt = document.getElementById('altura');
-        var larg = document.getElementById('largura');
+        
 
         function verificarCampo() {
             var campo1 = document.getElementById('campo1').value;
@@ -42,13 +39,37 @@ include("../verifica_login.php");
             }
         }
         
-        function CalculaMetragemParede() {
-            if (qtd.value > 0) {
-                multi = (alt.value*larg.value)-(1.68*qtd.value);
+        function calculaMetragemParede() {
+            console.log('Entrou na função de cálculo');
+
+            var qtd = document.querySelector('#campo3 input').value;
+            var alt = document.querySelector('#altura input').value;
+            var larg = document.querySelector('#largura input').value;
+
+            // Converter valores para números
+            var fqtd = parseFloat(qtd);
+            var falt = parseFloat(alt);
+            var flarg = parseFloat(larg);
+
+            // Verifique se a conversão foi bem-sucedida
+            if (isNaN(fqtd)) fqtd = 0;
+            if (isNaN(falt)) falt = 0;
+            if (isNaN(flarg)) flarg = 0;
+
+            console.log('Altura:', falt);
+            console.log('Largura:', flarg);
+            console.log('Quantidade de Portas:', fqtd);
+
+            var multi;
+            if (fqtd > 0) {
+                multi = (falt * flarg) - (1.68 * fqtd);
             } else {
-                multi = (alt.value*larg.value);
+                multi = (falt * flarg);
             }
-            console.log(multi);
+
+            // Exibir o resultado na página
+            var resultadoSpan = document.getElementById('resultado');
+            resultadoSpan.textContent = multi.toFixed(2); // Exemplo de formatação, ajuste conforme necessário
         }
     </script>
     <!-- Autor Gabriel caleffo -->
@@ -91,11 +112,11 @@ include("../verifica_login.php");
                 <br><br>
                 <div id="altura" style="display:none;">
                     <label for="altura">Qual a altura?: </label>
-                    <input type="float" name="altura">
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
                 </div>
                 <div id="largura" style="display:none;">
                     <label for="largura">Qual a largura?: </label>
-                    <input type="float" name="largura">
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
                 </div>
                 <div id="campo2" style="display:none;">
                     <label for="campo2">Tem portas?: </label>
@@ -103,16 +124,16 @@ include("../verifica_login.php");
                 </div>
                 <div id="campo3" style="display:none;">
                     <label for="campo3">Quantas Portas?: </label>
-                    <input type="number" name="campo3">
+                    <input type="number" name="qtdPorta">
                 <br><br>
-                <input type="submit" onclick="CalculaMetragemParede()" value="Quantidade Material">
+                <button type="button" onclick="calculaMetragemParede()" value="Quantidade Material">Quantidade Material</button>
                 </div>
             </form>
             <!-- Autor Gabriel caleffo -->
         </div>
         <div class="op2">
             <label for="">Medida em M²: </label>
-            <label id="Valor"></label>
+            <span id="resultado"></span>
         </div>
     </section>
     <a href="#" id="linkTopo">&#9650;</a>   
