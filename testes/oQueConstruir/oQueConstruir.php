@@ -62,7 +62,7 @@ include("../verifica_login.php");
 
             var multi;
             if (fqtd > 0) {
-                multi = (falt * flarg) - (1.68 * fqtd);
+                multi = (falt * flarg) - (1.68/* M² de uma porta de 80cm de largura */ * fqtd);
             } else {
                 multi = (falt * flarg);
             }
