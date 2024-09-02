@@ -3,13 +3,14 @@ session_start();
 include('conexao.php');
 
 //verifica se campos de textos estão vazios 
-if (empty($_POST['usuario']) || empty($_POST['senha'])) {
+if (empty($_POST['usuario']) || empty($_POST['senha']) || empty($_POST['email'])) {
     header('location: index.php');
     exit();
 }
 
 
 //captura os dados do campo de texto
+$email = mysqli_real_escape_string($conexao,$_POST['email']);
 $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
 $senha = mysqli_real_escape_string($conexao,$_POST['senha']);
 
@@ -31,9 +32,9 @@ if ($row >= 1) {
     //cria query para mandar no sql
     $query = "INSERT INTO
     usuario
-    (usuario, senha)
+    (email, usuario, senha)
     VALUES
-    ('{$usuario}', md5('{$senha}'));";
+    ('{$email}','{$usuario}', md5('{$senha}'));";
 
 
     //executa a query
