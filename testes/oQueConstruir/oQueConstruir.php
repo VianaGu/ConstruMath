@@ -19,24 +19,41 @@ include("../verifica_login.php");
         
 
         function verificarCampo() {
-            var campo1 = document.getElementById('campo1').value;
-            var campo2 = document.getElementById('campo2');
-			var campo3 = document.getElementById ('campo3');
+            var campo1 = document.getElementById('campo1').value;/* Entrada de qual tipo de construção */
+			var campo3 = document.getElementById ('campo3'); /* Campo de quantas portas Quantas portas? */
             var altura = document.getElementById('altura');
             var largura = document.getElementById('largura');
+            var espessura = document.getElementById('espessura');
+            var larguraPiso = document.getElementById('larguraPiso');
+            var comprimento = document.getElementById('comprimento');
 
             // Condição para exibir o segundo campo se o campo1 tiver a palavra "parede"
-            if (campo1.toLowerCase() == 'parede') {
-                campo2.style.display = 'block';
-				campo3.style.display = 'block';
-                altura.style.display = 'block';
-                largura.style.display = 'block';
-            } else {
-                campo2.style.display = 'none';
-				campo3.style.display = 'none';
-                altura.style.display = 'none';
-                largura.style.display = 'none';
+            console.log("Valor de campo1:", campo1.toLowerCase());
+            switch (campo1.toLowerCase()) {
+                case 'parede':
+                    console.log("Entrou no caso parede");
+                    campo3.style.display = 'block';
+                    altura.style.display = 'block';
+                    largura.style.display = 'block';
+                    break;
+                case 'piso':
+                    console.log("Entrou no caso piso");
+                    espessura.style.display = 'block';
+                    larguraPiso.style.display = 'block';
+                    comprimento.style.display = 'block';
+                    break;
+                default:
+                    console.log("Entrou no caso padrão");
+                    campo3.style.display = 'none';
+                    altura.style.display = 'none';
+                    largura.style.display = 'none';
+
+                    espessura.style.display = 'none';
+                    larguraPiso.style.display = 'none';
+                    comprimento.style.display = 'none';
+                    break;
             }
+           
         }
         
         function calculaMetragemParede() {
@@ -68,8 +85,43 @@ include("../verifica_login.php");
             }
 
             // Exibir o resultado na página
-            var resultadoSpan = document.getElementById('resultado');
-            resultadoSpan.textContent = multi.toFixed(2); // Exemplo de formatação, ajuste conforme necessário
+            var resultM2Span = document.getElementById('resultM2');
+            resultM2Span.textContent = multi.toFixed(2); // Exemplo de formatação, ajuste conforme necessário
+        }
+        function calculaMetragemPiso() {
+            console.log('Entrou na função de cálculo piso');
+
+            var esp = document.querySelector('#espessura input').value;
+            var com = document.querySelector('#comprimento input').value;
+            var larg = document.querySelector('#larguraPiso input').value;
+
+            // Converter valores para números
+            var fesp = parseFloat(esp);
+            var fcom = parseFloat(com);
+            var flarg = parseFloat(larg);
+
+            // Verifique se a conversão foi bem-sucedida
+            if (isNaN(fesp)) fesp = 0;
+            if (isNaN(fcom)) fcom = 0;
+            if (isNaN(flarg)) flarg = 0;
+
+            console.log('espessura:', fesp);
+            console.log('Largura:', flarg);
+            console.log('Comprimento:', fcom);
+
+            var multiM2;
+            multiM2 = (flarg * fcom);
+            // Exibir o resultado na página
+            var resultM2Span = document.getElementById('resultM2');
+            resultM2Span.textContent = multiM2.toFixed(2); // Exemplo de formatação, ajuste conforme necessário
+
+            var multiM3;
+            multiM3 = (flarg * fcom * fesp);
+            //Exibir o resultado na página
+            console.log("M³:" + multiM3);
+            
+            var resultM3Span = document.getElementById('resultM3');
+            resultM3Span.textContent = multiM3.toFixed(2);
         }
     </script>
     <!-- Autor Gabriel caleffo -->
@@ -108,8 +160,25 @@ include("../verifica_login.php");
             <!-- Autor Gabriel caleffo -->
             <form method="post" action="">
                 <label for="campo1">O que Pretende Construir?: </label>
-                <input type="text" id="campo1" name="campo1" onkeyup="verificarCampo()" placeholder="Parede, Piso ou Laje?">
+                <input type="text" id="campo1" name="campo1" onkeyup="verificarCampo()" placeholder="Parede ou Piso?">
                 <br><br>
+                <!-- Piso  -->
+                <div id="larguraPiso" style="display:none;">
+                    <label for="larguraPiso">Qual a largura?: </label>
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
+                </div>
+                <div id="comprimento" style="display:none;">
+                    <label for="comprimento">Qual a comprimento?: </label>
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
+                </div>
+                <div id="espessura" style="display:none;">
+                    <label for="espessura">Qual a espessura?: </label>
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="espessura">
+                    <br><br>
+                <button type="button" onclick="calculaMetragemPiso()" value="Quantidade Material">Quantidade Material</button>
+                </div>    
+                <!-- fim piso  -->
+                <!-- Parede  -->
                 <div id="altura" style="display:none;">
                     <label for="altura">Qual a altura?: </label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
@@ -118,13 +187,11 @@ include("../verifica_login.php");
                     <label for="largura">Qual a largura?: </label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
                 </div>
-                <div id="campo2" style="display:none;">
-                    <label for="campo2">Tem portas?: </label>
-                    <input type="text" name="campo2">
-                </div>
                 <div id="campo3" style="display:none;">
-                    <label for="campo3">Quantas Portas?: </label>
+                    <label for="campo3">Tem portas? Quantas?: </label>
                     <input type="number" name="qtdPorta">
+                    <label for="">Se não houver deixe em branco</label>
+                <!-- Fim Parede -->    
                 <br><br>
                 <button type="button" onclick="calculaMetragemParede()" value="Quantidade Material">Quantidade Material</button>
                 </div>
@@ -132,8 +199,24 @@ include("../verifica_login.php");
             <!-- Autor Gabriel caleffo -->
         </div>
         <div class="op2">
-            <label for="">Medida em M²: </label>
-            <span id="resultado"></span>
+            <label for="resultM2">Medida em M²: </label>
+            <span id="resultM2"></span>
+            <br>
+            <label for="resultM3">Medida em M³: </label>
+            <span id="resultM3"></span>
+            <br>
+            <label for="">Quantidade de cimento: </label>
+            <span id="resultCimento"></span>
+            <br>
+            <label for="">Quantidade de areia: </label>
+            <span id="resultAreia"></span>
+            <br>
+            <label for="">Quantidade de pedra: </label>
+            <span id="resultPedra"></span>
+            <br>
+            <label for="">Quantidade de àgua: </label>
+            <span id="resultAgua"></span>
+
         </div>
     </section>
     <a href="#" id="linkTopo">&#9650;</a>   
