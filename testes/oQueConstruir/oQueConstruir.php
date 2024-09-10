@@ -9,6 +9,7 @@ include("../verifica_login.php");
     <meta autor="Gustavo Viana">
     <link rel="stylesheet" href="../css/NavBar.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/OqConstruir1.css">
     <link rel="stylesheet" href="../css/oqConstruir.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/006642858d.js"></script>
@@ -164,15 +165,15 @@ include("../verifica_login.php");
                 <br><br>
                 <!-- Piso  -->
                 <div id="larguraPiso" style="display:none;">
-                    <label for="larguraPiso">Qual a largura?: </label>
+                    <label for="larguraPiso">Qual a largura?(Em metros): </label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
                 </div>
                 <div id="comprimento" style="display:none;">
-                    <label for="comprimento">Qual a comprimento?: </label>
+                    <label for="comprimento">Qual a comprimento?:(Em metros) </label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
                 </div>
                 <div id="espessura" style="display:none;">
-                    <label for="espessura">Qual a espessura?: </label>
+                    <label for="espessura">Qual a espessura?:(Em metros)</label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="espessura">
                     <br><br>
                 <button type="button" onclick="calculaMetragemPiso()" value="Quantidade Material">Quantidade Material</button>
@@ -180,11 +181,11 @@ include("../verifica_login.php");
                 <!-- fim piso  -->
                 <!-- Parede  -->
                 <div id="altura" style="display:none;">
-                    <label for="altura">Qual a altura?: </label>
+                    <label for="altura">Qual a altura?:(Em metros) </label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
                 </div>
                 <div id="largura" style="display:none;">
-                    <label for="largura">Qual a largura?: </label>
+                    <label for="largura">Qual a largura?:(Em metros) </label>
                     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
                 </div>
                 <div id="campo3" style="display:none;">
@@ -218,8 +219,7 @@ include("../verifica_login.php");
             <span id="resultAgua"></span>
 
         </div>
-    </section>
-    <a href="#" id="linkTopo">&#9650;</a>   
+    </section> 
     <script src="../js/mobile-navbar.js"></script>    
 </body>
 </html>
