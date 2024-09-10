@@ -9,6 +9,7 @@ include("../verifica_login.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Materiais por Metro Cúbico</title>
+    <link rel="stylesheet" href="../css/NavBar.css">
     <style>
         body {
             display: flex;
@@ -52,6 +53,33 @@ include("../verifica_login.php");
 <body>
 
 <div class="container">
+   <!-- Navigation bar  -->
+   <header>
+        <nav>
+			<!-- logo -->
+            <div class="ajustaLogo">
+                <img src="../img\logo.jpg" alt="Logo" class="logoImg">
+                <a class="logo" href="../home/painel.php">ConstruMath</a>
+            </div>
+			<!-- fim logo -->
+			<!-- Botão Mobile -->
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
+            </div>
+			<!-- Botão Mobile -->
+			<!-- Lista de abas -->
+            <ul class="nav-list">
+                <!--  Links para proximas pag  -->
+                <li><a href="../home/painel.php">Home</a></li>
+                <li><a href="../oQueConstruir/oQueConstruir.php" >O que quer construir?</a></li>
+                <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
+                <li><a href="../calculadora/calculadora.php" class="active">Calculadora</a></li>
+                <li><a href="../logout.php">Sair</a></li>
+            </ul> 
+			<!-- Fim Lista de abas -->
+        </nav>
+    </header>
+    <!-- End navigation bar -->
     <h1>Calculadora de Areia por Metro Cúbico</h1>
     
     <form method="post" action="">

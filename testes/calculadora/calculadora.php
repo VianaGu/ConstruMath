@@ -60,8 +60,8 @@ include("../verifica_login.php");
     </style>
 </head>
 <body>
-<!-- Navigation bar  -->
-<header>
+   <!-- Navigation bar  -->
+   <header>
         <nav>
 			<!-- logo -->
             <div class="ajustaLogo">
@@ -78,9 +78,9 @@ include("../verifica_login.php");
             <ul class="nav-list">
                 <!--  Links para proximas pag  -->
                 <li><a href="../home/painel.php">Home</a></li>
-                <li><a href="#" class="active">O que quer construir?</a></li>
+                <li><a href="../oQueConstruir/oQueConstruir.php" >O que quer construir?</a></li>
                 <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
-                <li><a href="../calculadora/calculadora.php">Calculadora</a></li>
+                <li><a href="../calculadora/calculadora.php" class="active">Calculadora</a></li>
                 <li><a href="../logout.php">Sair</a></li>
             </ul> 
 			<!-- Fim Lista de abas -->

@@ -6,6 +6,10 @@ include('conexao.php');
 if (empty($_POST['usuario']) || empty($_POST['senha']) || empty($_POST['email'])) {
     header('location: index.php');
     exit();
+}else if (filter_var('email', FILTER_VALIDATE_EMAIL)) {
+    header('location: index.php');
+    $_SESSION['emailInvalido'];
+    exit(); 
 }
 
 
@@ -28,7 +32,11 @@ if ($row >= 1) {
     $_SESSION["ja_cadastro"] = true;
     header('location: cadastro.php');
     exit();
-}else{
+}else if ($_SESSION['emailInvalido'] = true){
+    header('location: cadastro.php');
+    exit();
+}
+else{
     //cria query para mandar no sql
     $query = "INSERT INTO
     usuario

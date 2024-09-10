@@ -32,6 +32,16 @@ session_start();
                     unset($_SESSION['ja_cadastro']);
                     ?>
                     <?php 
+                        if(isset($_SESSION['emailInvalido'])):
+                    ?>
+                    <div class="notification is-danger">
+                      <p>E-mail Inválido.</p>
+                    </div>
+                    <?php
+                    endif;
+                    unset($_SESSION['ja_cadastro']);
+                    ?>
+                    <?php 
                         if(isset($_SESSION['cadastrado'])):
                     ?>
                     <div class="notification is-danger">
