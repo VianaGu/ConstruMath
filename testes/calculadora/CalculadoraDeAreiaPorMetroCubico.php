@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Pedregulho</title>
+    <title>Calculadora de Areia por Metro Cúbico</title>
     <style>
         /* Barra de navegação */
         nav {
@@ -13,7 +13,7 @@
             position: fixed; /* Fixar no topo */
             top: 0;
             left: 0;
-            z-index: 1000; /* Para garantir que a barra fique no topo da camada */
+            z-index: 1000; /* Garantir que a barra fique no topo */
         }
 
         nav .ajustaLogo {
@@ -49,76 +49,57 @@
         }
 
         nav ul li a:hover, nav ul li a.active {
-            background-color: #002D5A;
+            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
             border-radius: 5px;
         }
 
-        /* Estilos para o corpo e os botões */
+        /* Estilos para o corpo e o formulário */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            padding-top: 80px; /* Espaço para a barra de navegação */
+            padding-top: 80px; /* Compensa o espaço da barra de navegação */
         }
 
-        /* Centralização da calculadora */
-        .calculator-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
             border-radius: 10px;
-        }
-
-        .form-container {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
             width: 100%;
+        }
+
+        h1 {
             margin-bottom: 20px;
+            color: #004A8D;
         }
 
-        label, input {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input[type="number"] {
-            padding: 8px;
+        input, select, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
             width: 100%;
             max-width: 300px;
-            border: 1px solid #ccc;
             border-radius: 5px;
+            border: 1px solid #ccc;
         }
 
         button {
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
             background-color: #004A8D; /* Cor de fundo do botão */
             color: white; /* Texto branco */
-            width: 100%;
-            max-width: 300px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
-        }
-
-        /* Título centralizado */
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #004A8D;
+            background-color: #002D5A; /* Tom mais escuro de azul para hover */
         }
 
         h2 {
@@ -146,32 +127,41 @@
     </nav>
 </header>
 
-<!-- Conteúdo principal centralizado -->
-<div class="calculator-container">
-    <h1>Calculadora de Pedregulho</h1>
-
+<!-- Conteúdo principal -->
+<div class="container">
+    <h1>Calculadora de Areia por Metro Cúbico</h1>
+    
     <form method="post" action="">
-        <div class="form-container">
-            <label for="metrosCubicos">Insira a quantidade de metros cúbicos:</label>
-            <input type="number" id="metrosCubicos" name="metrosCubicos" step="0.01" required>
-        </div>
+        <label for="quilosAreia">Insira a quantidade de areia (kg):</label>
+        <input type="number" id="quilosAreia" name="quilosAreia" step="0.01" required>
+
+        <label for="tipoAreia">Selecione o tipo de areia:</label>
+        <select id="tipoAreia" name="tipoAreia" required>
+            <option value="1500">Grossa (1500 kg/m³)</option>
+            <option value="1480">Média (1480 kg/m³)</option>
+            <option value="1400">Fina (1400 kg/m³)</option>
+        </select>
+
         <button type="submit">Calcular</button>
     </form>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Recebe o valor inserido pelo usuário
-        $metrosCubicos = $_POST["metrosCubicos"];
-
-        // Definindo o valor do metro cúbico em kg/m³
-        $valorPorMetroCubico = 1400; // kg/m³
-        
-        // Calculando a quantidade total de pedregulho
-        $quantidadePedregulho = $metrosCubicos * $valorPorMetroCubico;
-        
-        // Exibindo o resultado
+        // Recebe os valores inseridos pelo usuário
+        $quilosAreia = $_POST["quilosAreia"];
+        $densidadeAreia = $_POST["tipoAreia"];
+    
+        // Calcula a quantidade em metros cúbicos e em litros
+        $metrosCubicos = $quilosAreia / $densidadeAreia;
+        $litros = $metrosCubicos * 1000;
+    
+        // Formata os resultados para duas casas decimais
+        $metrosCubicosFormatado = number_format($metrosCubicos, 6, ',', '.');
+        $litrosFormatado = number_format($litros, 4, ',', '.');
+    
+        // Exibe o resultado
         echo "<h2>Resultado:</h2>";
-        echo "<p>A quantidade de pedregulho necessária para $metrosCubicos metros cúbicos é $quantidadePedregulho kg.</p>";
+        echo "<p>Para $quilosAreia kg de areia, você precisará comprar aproximadamente $metrosCubicosFormatado metros cúbicos, o que equivale a $litrosFormatado litros de areia.</p>";
     }
     ?>
 </div>

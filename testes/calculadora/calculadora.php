@@ -10,21 +10,74 @@ include("../verifica_login.php");
     <title>Página de Cálculos</title>
     <link rel="stylesheet" href="../css/NavBar.css">
     <style>
-        body {
+        /* Barra de navegação */
+        nav {
+            background-color: #004A8D;
+            width: 100%;
+            padding: 15px 0;
+            position: fixed; /* Fixar no topo */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Para garantir que a barra fique no topo da camada */
+        }
+
+        nav .ajustaLogo {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
+            border-radius: 5px;
+        }
+
+        /* Estilos para o corpo e os botões */
+        body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding-top: 80px; /* Compensa o espaço da barra de navegação */
         }
 
         .container {
             display: flex;
-            justify-content: space-between;
-            width: 80%;
-            max-width: 800px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
         }
 
         .container button {
@@ -33,62 +86,61 @@ include("../verifica_login.php");
             cursor: pointer;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: #004A8D; /* Cor de fundo do botão */
+            color: white; /* Texto branco */
             transition: background-color 0.3s;
+            margin-bottom: 10px;
+            width: 100%; /* Botões ocupando toda a largura do container */
+            max-width: 400px;
         }
 
         .container button:hover {
-            background-color: #45a049;
+            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
+        }
+
+        .bottom-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .bottom-button {
-            margin-top: 20px;
             padding: 15px 20px;
             font-size: 16px;
             cursor: pointer;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: #004A8D; /* Cor de fundo do botão */
+            color: white; /* Texto branco */
             transition: background-color 0.3s;
+            width: 100%;
+            max-width: 400px;
         }
 
         .bottom-button:hover {
-            background-color: #45a049;
+            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
         }
     </style>
 </head>
 <body>
-   <!-- Navigation bar  -->
-   <header>
-        <nav>
-			<!-- logo -->
-            <div class="ajustaLogo">
-                <img src="../img\logo.jpg" alt="Logo" class="logoImg">
-                <a class="logo" href="../home/painel.php">ConstruMath</a>
-            </div>
-			<!-- fim logo -->
-			<!-- Botão Mobile -->
-            <div class="menu-btn">
-                <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
-            </div>
-			<!-- Botão Mobile -->
-			<!-- Lista de abas -->
-            <ul class="nav-list">
-                <!--  Links para proximas pag  -->
-                <li><a href="../home/painel.php">Home</a></li>
-                <li><a href="../oQueConstruir/oQueConstruir.php" >O que quer construir?</a></li>
-                <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
-                <li><a href="../calculadora/calculadora.php" class="active">Calculadora</a></li>
-                <li><a href="../logout.php">Sair</a></li>
-            </ul> 
-			<!-- Fim Lista de abas -->
-        </nav>
-    </header>
-    <!-- End navigation bar -->
+<!-- Navigation bar  -->
+<header>
+    <nav>
+        <div class="ajustaLogo">
+            <img src="../img/logo.jpg" alt="Logo" class="logoImg" style="height: 50px;">
+            <a class="logo" href="../home/painel.php">ConstruMath</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../home/painel.php">Home</a></li>
+            <li><a href="#" class="active">O que quer construir?</a></li>
+            <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
+            <li><a href="../calculadora/calculadora.php">Calculadora</a></li>
+            <li><a href="../logout.php">Sair</a></li>
+        </ul> 
+    </nav>
+</header>
 
-
+<!-- Conteúdo principal -->
 <div class="container">
     <button onclick="location.href='CalculoDeMateriais.php'">Cálculo de materiais</button>
     <button onclick="location.href='PesoDoPedregulho.php'">Peso do pedregulho</button>
@@ -96,7 +148,10 @@ include("../verifica_login.php");
     <button onclick="location.href='CalculoDeConcreto.php'">Cálculo de concreto</button>
 </div>
 
-<button class="bottom-button" onclick="location.href='CalculadoraDeMateriaisPorMetroCubico.php'">Cálculo de materiais por metro cúbico</button>
+<div class="bottom-buttons">
+    <button class="bottom-button" onclick="location.href='CalculadoraDeAreiaPorMetroCubico.php'">Cálculo de areia por metro cúbico</button>
+    <button class="bottom-button" onclick="location.href='CalculadoraDeBritaPorMetroCubico.php'">Cálculo de brita por metro cúbico</button>
+</div>
 
 </body>
 </html>
