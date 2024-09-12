@@ -7,9 +7,10 @@ include("../verifica_login.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/NavBar.css">
+    <script defer src="../js/mobile-navbar.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Página de Cálculos</title>
-    <link rel="stylesheet" href="../css/NavBar.css">
     <style>
         /* Barra de navegação */
         nav {
@@ -34,10 +35,7 @@ include("../verifica_login.php");
             margin-left: 10px;
         }
 
-        nav ul li {
-            display: inline-block;
-        }
-
+    
         nav ul li a {
             color: white;
             text-decoration: none;
