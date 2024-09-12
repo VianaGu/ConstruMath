@@ -161,20 +161,20 @@ include("../verifica_login.php");
             <!-- Autor Gabriel caleffo -->
             <form method="post" action="">
                 <label for="campo1">O que Pretende Construir?: </label>
-                <input type="text" id="campo1" name="campo1" onkeyup="verificarCampo()" placeholder="Parede ou Piso?">
+                <input type="text" autocomplete="off" id="campo1" name="campo1" onkeyup="verificarCampo()" placeholder="Parede ou Piso?">
                 <br><br>
                 <!-- Piso  -->
                 <div id="larguraPiso" style="display:none;">
                     <label for="larguraPiso">Qual a largura?(Em metros): </label>
-                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
                 </div>
                 <div id="comprimento" style="display:none;">
                     <label for="comprimento">Qual a comprimento?:(Em metros) </label>
-                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
                 </div>
                 <div id="espessura" style="display:none;">
                     <label for="espessura">Qual a espessura?:(Em metros)</label>
-                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="espessura">
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="espessura">
                     <br><br>
                 <button type="button" onclick="calculaMetragemPiso()" value="Quantidade Material">Quantidade Material</button>
                 </div>    
@@ -182,15 +182,15 @@ include("../verifica_login.php");
                 <!-- Parede  -->
                 <div id="altura" style="display:none;">
                     <label for="altura">Qual a altura?:(Em metros) </label>
-                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
                 </div>
                 <div id="largura" style="display:none;">
                     <label for="largura">Qual a largura?:(Em metros) </label>
-                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
                 </div>
                 <div id="campo3" style="display:none;">
                     <label for="campo3">Tem portas? Quantas?: </label>
-                    <input type="number" name="qtdPorta">
+                    <input type="number" autocomplete="off" name="qtdPorta">
                     <label for="">Se não houver deixe em branco</label>
                 <!-- Fim Parede -->    
                 <br><br>

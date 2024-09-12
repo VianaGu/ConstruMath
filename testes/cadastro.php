@@ -55,12 +55,12 @@ session_start();
                         <form action="cadastrar.php" method="POST">
                             <div class="field">
                                 <div class="control">
-                                    <input name="email" type="e-mail" class="input is-large" placeholder="Seu melhor e-mail" autofocus="">
+                                    <input name="email" autocomplete="off" type="e-mail" class="input is-large" placeholder="Seu melhor e-mail" autofocus="">
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input name="usuario" name="text" class="input is-large" placeholder="Seu usuário" autofocus="">
+                                    <input name="usuario" autocomplete="off" name="text" class="input is-large" placeholder="Seu usuário" autofocus="">
                                 </div>
                             </div>
 
