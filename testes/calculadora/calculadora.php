@@ -7,6 +7,7 @@ include("../verifica_login.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Página de Cálculos</title>
     <link rel="stylesheet" href="../css/NavBar.css">
     <style>
@@ -14,7 +15,7 @@ include("../verifica_login.php");
         nav {
             background-color: #004A8D;
             width: 100%;
-            padding: 15px 0;
+            padding: 0 50px 0 30px;
             position: fixed; /* Fixar no topo */
             top: 0;
             left: 0;
@@ -23,7 +24,7 @@ include("../verifica_login.php");
 
         nav .ajustaLogo {
             display: flex;
-            align-items: center;
+            align-items: left;
         }
 
         nav .logo {
@@ -31,15 +32,6 @@ include("../verifica_login.php");
             font-size: 24px;
             text-decoration: none;
             margin-left: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-            width: 100%;
         }
 
         nav ul li {
@@ -130,11 +122,16 @@ include("../verifica_login.php");
             <img src="../img/logo.jpg" alt="Logo" class="logoImg" style="height: 50px;">
             <a class="logo" href="../home/painel.php">ConstruMath</a>
         </div>
+        <!-- Botão Mobile -->
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
+        </div>
+        <!-- Botão Mobile -->
         <ul class="nav-list">
             <li><a href="../home/painel.php">Home</a></li>
-            <li><a href="#" class="active">O que quer construir?</a></li>
+            <li><a href="../oQueConstruir/oQueConstruir.php">O que quer construir?</a></li>
             <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
-            <li><a href="../calculadora/calculadora.php">Calculadora</a></li>
+            <li><a href="../calculadora/calculadora.php" class="active">Calculadora</a></li>
             <li><a href="../logout.php">Sair</a></li>
         </ul> 
     </nav>

@@ -45,10 +45,6 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: orange; /* Cor de destaque para hover */
-}
-
 /* Estilos responsivos para a barra de navegação */
 @media (max-width: 768px) {
     .menu-btn {
@@ -147,6 +143,4 @@ form button:hover {
     transition: background-color 0.3s;
 }
 
-#linkTopo:hover {
-    background-color: orange;
-}
+

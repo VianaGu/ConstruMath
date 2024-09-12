@@ -20,7 +20,7 @@ session_start();
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
-                    <h3 class="title has-text-grey">Login</h3>
+                    <h3 class="title">Login</h3>
                     <?php 
                         if(isset($_SESSION['nao autenticado'])):
                     ?>
@@ -47,7 +47,7 @@ session_start();
                             <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
                         </form>
                     </div>
-                    <h1 class="title has-text-grey"><a href="cadastro.php">Cadastrar</a></h1>
+                    <h1 class="title"><a href="cadastro.php">Cadastrar</a></h1>
                 </div>
             </div>
         </div>

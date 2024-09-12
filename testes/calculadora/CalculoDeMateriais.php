@@ -7,6 +7,7 @@ include("../verifica_login.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Cálculo de Materiais</title>
     <link rel="stylesheet" href="../css/NavBar.css">
     <style>
@@ -134,11 +135,16 @@ include("../verifica_login.php");
             <img src="../img/logo.jpg" alt="Logo" class="logoImg" style="height: 50px;">
             <a class="logo" href="../home/painel.php">ConstruMath</a>
         </div>
+        <!-- Botão Mobile -->
+        <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
+            </div>
+			<!-- Botão Mobile -->
         <ul class="nav-list">
             <li><a href="../home/painel.php">Home</a></li>
-            <li><a href="#" class="active">O que quer construir?</a></li>
+            <li><a href="../oQueConstruir/oQueConstruir.php">O que quer construir?</a></li>
             <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
-            <li><a href="../calculadora/calculadora.php">Calculadora</a></li>
+            <li><a href="../calculadora/calculadora.php" class="active">Calculadora</a></li>
             <li><a href="../logout.php">Sair</a></li>
         </ul>
     </nav>

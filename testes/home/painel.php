@@ -11,6 +11,7 @@ include('../verifica_login.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/006642858d.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
@@ -21,12 +22,12 @@ include('../verifica_login.php');
 			<!-- logo -->
             <div class="ajustaLogo">
                 <img src="../img\logo.jpg" alt="Logo" class="logoImg">
-                <a class="logo" th:href="@{/index}">ConstruMath</a>
+                <a class="logo" href="#">ConstruMath</a>
             </div>
 			<!-- fim logo -->
 			<!-- Botão Mobile -->
             <div class="menu-btn">
-                <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
+                <i class="fas fa-bars fa-2x" onclick="menuShow();"></i>
             </div>
 			<!-- Botão Mobile -->
 			<!-- Lista de abas -->
