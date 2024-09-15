@@ -23,6 +23,8 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 4px;
 	  background-color: var(--colorNav);
+    font-size: 1.5em;
+    font-weight: bold;
   }
   
   .logoImg {
