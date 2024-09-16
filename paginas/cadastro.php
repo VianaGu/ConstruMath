@@ -13,9 +13,22 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="css/NavBar.css">
 </head>
 
 <body>
+    <!-- Navigation bar  -->
+    <header>
+        <nav>
+			<!-- logo -->
+            <div class="ajustaLogo">
+                <img src="img\logo.jpg" alt="Logo" class="logoImg">
+                <a class="logo" href="../home/painel.php">ConstruMath</a>
+            </div>
+			<!-- fim logo -->
+        </nav>
+    </header>
+    <!-- End navigation bar -->
     <section class="hero is-success is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">

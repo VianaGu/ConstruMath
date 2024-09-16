@@ -10,12 +10,25 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
+    <link rel="stylesheet" href="css/NavBar.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 
 <body>
+    <!-- Navigation bar  -->
+    <header>
+        <nav>
+			<!-- logo -->
+            <div class="ajustaLogo">
+                <img src="img\logo.jpg" alt="Logo" class="logoImg">
+                <a class="logo" href="../home/painel.php">ConstruMath</a>
+            </div>
+			<!-- fim logo -->
+        </nav>
+    </header>
+    <!-- End navigation bar -->
     <section class="hero is-success is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
