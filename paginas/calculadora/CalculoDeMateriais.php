@@ -15,7 +15,7 @@ include("../verifica_login.php");
         nav {
             background-color: #004A8D;
             width: 100%;
-            padding: 15px 0;
+            padding: 0 50px 0 30px;
             position: fixed; /* Fixar no topo */
             top: 0;
             left: 0;
@@ -33,7 +33,7 @@ include("../verifica_login.php");
             text-decoration: none;
             margin-left: 10px;
         }
-
+/* 
         nav ul {
             list-style: none;
             display: flex;
@@ -41,7 +41,7 @@ include("../verifica_login.php");
             margin: 0;
             padding: 0;
             width: 100%;
-        }
+        } */
 
         nav ul li {
             display: inline-block;

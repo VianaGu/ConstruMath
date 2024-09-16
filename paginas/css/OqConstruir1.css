@@ -5,68 +5,7 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-
-/* Corpo da página */
-
-
-/* Cabeçalho e navegação */
-
-.ajustaLogo {
-    display: flex;
-    align-items: center;
-}
-
-.logoImg {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.menu-btn {
-    display: none; /* Oculta o botão de menu por padrão */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-}
-
-/* Estilos responsivos para a barra de navegação */
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-list {
-        display: none; /* Oculta a lista de navegação no mobile */
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        left: 0;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-}
-
+/* Corpo da página *
 /* Estilo do formulário */
 section.cntflex {
     display: flex;

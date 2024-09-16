@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/NavBar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Calculadora de Pedregulho</title>
     <style>
-        /* Barra de navegação */
-        nav {
+         /* Barra de navegação */
+         nav {
             background-color: #004A8D;
             width: 100%;
-            padding: 15px 0;
+            padding: 0 50px 0 30px;
             position: fixed; /* Fixar no topo */
             top: 0;
             left: 0;
@@ -28,7 +29,7 @@
             text-decoration: none;
             margin-left: 10px;
         }
-
+/* 
         nav ul {
             list-style: none;
             display: flex;
@@ -36,7 +37,7 @@
             margin: 0;
             padding: 0;
             width: 100%;
-        }
+        } */
 
         nav ul li {
             display: inline-block;
@@ -50,7 +51,7 @@
         }
 
         nav ul li a:hover, nav ul li a.active {
-            background-color: #002D5A;
+            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
             border-radius: 5px;
         }
 
