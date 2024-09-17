@@ -23,7 +23,7 @@ session_start();
 			<!-- logo -->
             <div class="ajustaLogo">
                 <img src="img\logo.jpg" alt="Logo" class="logoImg">
-                <a class="logo" href="../home/painel.php">ConstruMath</a>
+                <a class="logo" href="#">ConstruMath</a>
             </div>
 			<!-- fim logo -->
         </nav>
