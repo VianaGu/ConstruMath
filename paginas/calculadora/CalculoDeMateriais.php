@@ -10,6 +10,7 @@ include("../verifica_login.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Cálculo de Materiais</title>
     <link rel="stylesheet" href="../css/NavBar.css">
+    <script defer src="../js/mobile-navbar.js"></script>
     <style>
         /* Barra de navegação */
         nav {
