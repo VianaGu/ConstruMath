@@ -1,5 +1,5 @@
 # ConstruMath
-Projeto desenvolvido no 3º semestre do curso de Analise e Desenvolvimento de Sistemas
+Projeto desenvolvido no 3º/4º semestre do curso de Analise e Desenvolvimento de Sistemas
 
 Objetivos do projeto:
 - Deve fazer cálculos matemáticos 
@@ -31,7 +31,7 @@ Para rodar o site:
 <br>
 1.Abra o administrador de banco de dados do seu computador 
 <br>
-2.Abra o arquivo <a href="./testes/CriarDatabase.sql">CriarDatabase.sql </a> e rode no seu computador 
+2.Abra o arquivo <a href="./paginas/CriarDatabase.sql">CriarDatabase.sql </a> e rode no seu computador 
 <br>
 3.Inicie um servidor apache com xampp ou wampp
 <br>
