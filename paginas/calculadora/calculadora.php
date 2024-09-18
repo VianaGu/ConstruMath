@@ -27,14 +27,6 @@ include("../verifica_login.php");
             display: flex;
             align-items: left;
         }
-
-        nav .logo {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            margin-left: 10px;
-        }
-
     
         nav ul li a {
             color: white;

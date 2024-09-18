@@ -13,7 +13,7 @@
             background-color: #004A8D;
             width: 100%;
             padding: 0 50px 0 30px;
-            position: fixed; /* Fixar no topo */
+            position: absolute; /* Fixar no topo */
             top: 0;
             left: 0;
             z-index: 1000; /* Para garantir que a barra fique no topo da camada */
@@ -22,26 +22,6 @@
         nav .ajustaLogo {
             display: flex;
             align-items: center;
-        }
-
-        nav .logo {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            margin-left: 10px;
-        }
-/* 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        } */
-
-        nav ul li {
-            display: inline-block;
         }
 
         nav ul li a {
@@ -119,13 +99,13 @@
             color: #004A8D;
         }
 
-        ul {
+        ul.Result {
             list-style: none;
             padding: 0;
         }
 
-        li {
-            text-align: left;
+        ul.Result li {
+            text-align: center;
             margin-bottom: 10px;
             font-size: 16px;
         }
@@ -192,7 +172,7 @@
 
         echo "<h2>Resultados:</h2>";
         echo "<p>Para produzir <strong>$concretoKg kg</strong> de concreto, você precisará de:</p>";
-        echo "<ul>";
+        echo "<ul class=\"Result\">";
         echo "<li><strong>Cimento:</strong> " . number_format($cimentoLitros, 2) . " litros</li>";
         echo "<li><strong>Areia:</strong> " . number_format($areiaLitros, 2) . " litros</li>";
         echo "<li><strong>Brita:</strong> " . number_format($britaLitros, 2) . " litros</li>";

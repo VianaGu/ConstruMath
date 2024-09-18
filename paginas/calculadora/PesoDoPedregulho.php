@@ -24,26 +24,6 @@
             align-items: center;
         }
 
-        nav .logo {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            margin-left: 10px;
-        }
-/* 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        } */
-
-        nav ul li {
-            display: inline-block;
-        }
-
         nav ul li a {
             color: white;
             text-decoration: none;
