@@ -1,5 +1,5 @@
 <?php
-include("../verifica_login.php");
+include("../verifica_login.php")
 ?>
 
 <!DOCTYPE html>
@@ -12,97 +12,105 @@ include("../verifica_login.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Página de Cálculos</title>
     <style>
-        /* Barra de navegação */
-        nav {
-            background-color: #004A8D;
-            width: 100%;
-            padding: 0 50px 0 30px;
-            position: fixed; /* Fixar no topo */
-            top: 0;
-            left: 0;
-            z-index: 1000; /* Para garantir que a barra fique no topo da camada */
-        }
+    /* Barra de navegação */
+    nav {
+        background-color: #004A8D;
+        width: 100%;
+        padding: 0 50px 0 30px;
+        position: fixed; /* Fixar no topo */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Para garantir que a barra fique no topo da camada */
+    }
 
-        nav .ajustaLogo {
-            display: flex;
-            align-items: left;
-        }
-    
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            font-size: 18px;
-        }
+    nav .ajustaLogo {
+        display: flex;
+        align-items: left;
+    }
 
-        nav ul li a:hover, nav ul li a.active {
-            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
-            border-radius: 5px;
-        }
+    nav .logo {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        margin-left: 10px;
+    }
 
-        /* Estilos para o corpo e os botões */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding-top: 80px; /* Compensa o espaço da barra de navegação */
-        }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        font-size: 18px;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 600px;
-        }
+    nav ul li a:hover, nav ul li a.active {
+        background-color: #002D5A; /* Um tom mais escuro de azul para hover */
+        border-radius: 5px;
+    }
 
-        .container button {
-            padding: 15px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #004A8D; /* Cor de fundo do botão */
-            color: white; /* Texto branco */
-            transition: background-color 0.3s;
-            margin-bottom: 10px;
-            width: 100%; /* Botões ocupando toda a largura do container */
-            max-width: 400px;
-        }
+    /* Estilos para o corpo e os botões */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #99d3df; /* Nova cor de fundo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 80px; /* Compensa o espaço da barra de navegação */
+    }
 
-        .container button:hover {
-            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
-        }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+    }
 
-        .bottom-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
+    .container button {
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #004A8D; /* Cor de fundo do botão */
+        color: white; /* Texto branco */
+        transition: background-color 0.3s;
+        margin-bottom: 10px;
+        width: 100%; /* Botões ocupando toda a largura do container */
+        max-width: 400px;
+    }
 
-        .bottom-button {
-            padding: 15px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #004A8D; /* Cor de fundo do botão */
-            color: white; /* Texto branco */
-            transition: background-color 0.3s;
-            width: 100%;
-            max-width: 400px;
-        }
+    .container button:hover {
+        background-color: #002D5A; /* Um tom mais escuro de azul para hover */
+    }
 
-        .bottom-button:hover {
-            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
-        }
-    </style>
+    .bottom-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .bottom-button {
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #004A8D; /* Cor de fundo do botão */
+        color: white; /* Texto branco */
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .bottom-button:hover {
+        background-color: #002D5A; /* Um tom mais escuro de azul para hover */
+    }
+</style>
+
 </head>
 <body>
 <!-- Navigation bar  -->

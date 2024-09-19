@@ -1,7 +1,6 @@
 <?php
-include("../verifica_login.php");
+include("../verifica_login.php")
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,6 +27,25 @@ include("../verifica_login.php");
             align-items: center;
         }
 
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+/* 
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        } */
+
+        nav ul li {
+            display: inline-block;
+        }
 
         nav ul li a {
             color: white;
@@ -42,10 +60,11 @@ include("../verifica_login.php");
         }
 
         /* Estilos para o corpo e o conteúdo */
+        /* Estilos para o corpo e o conteúdo */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #99d3df;; /* Azul como fundo */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -53,6 +72,7 @@ include("../verifica_login.php");
             height: 100vh;
             padding-top: 80px; /* Espaço para a barra de navegação */
         }
+
 
         .calculator-container {
             display: flex;

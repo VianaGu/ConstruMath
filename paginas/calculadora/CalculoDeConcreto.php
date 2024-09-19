@@ -1,3 +1,6 @@
+<?php
+include("../verifica_login.php")
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,7 +16,7 @@
             background-color: #004A8D;
             width: 100%;
             padding: 0 50px 0 30px;
-            position: absolute; /* Fixar no topo */
+            position: fixed; /* Fixar no topo */
             top: 0;
             left: 0;
             z-index: 1000; /* Para garantir que a barra fique no topo da camada */
@@ -22,6 +25,17 @@
         nav .ajustaLogo {
             display: flex;
             align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
         }
 
         nav ul li a {
@@ -40,7 +54,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #99d3df; /* Nova cor de fundo */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,13 +113,13 @@
             color: #004A8D;
         }
 
-        ul.Result {
+        ul {
             list-style: none;
             padding: 0;
         }
 
-        ul.Result li {
-            text-align: center;
+        li {
+            text-align: left;
             margin-bottom: 10px;
             font-size: 16px;
         }
@@ -123,8 +137,8 @@
         <!-- Botão Mobile -->
         <div class="menu-btn">
                 <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
-            </div>
-			<!-- Botão Mobile -->
+        </div>
+        <!-- Botão Mobile -->
         <ul class="nav-list">
             <li><a href="../home/painel.php">Home</a></li>
             <li><a href="../oQueConstruir/oQueConstruir.php">O que quer construir?</a></li>
@@ -172,7 +186,7 @@
 
         echo "<h2>Resultados:</h2>";
         echo "<p>Para produzir <strong>$concretoKg kg</strong> de concreto, você precisará de:</p>";
-        echo "<ul class=\"Result\">";
+        echo "<ul>";
         echo "<li><strong>Cimento:</strong> " . number_format($cimentoLitros, 2) . " litros</li>";
         echo "<li><strong>Areia:</strong> " . number_format($areiaLitros, 2) . " litros</li>";
         echo "<li><strong>Brita:</strong> " . number_format($britaLitros, 2) . " litros</li>";

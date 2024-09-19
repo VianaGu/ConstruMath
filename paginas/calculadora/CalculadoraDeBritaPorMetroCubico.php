@@ -1,3 +1,6 @@
+<?php
+include("../verifica_login.php")
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,6 +27,17 @@
             align-items: center;
         }
 
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -40,7 +54,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #99d3df; /* Nova cor de fundo */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,9 +116,9 @@
         </div>
         <!-- Botão Mobile -->
         <div class="menu-btn">
-                <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
-            </div>
-			<!-- Botão Mobile -->
+            <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
+        </div>
+        <!-- Botão Mobile -->
         <ul class="nav-list">
             <li><a href="../home/painel.php">Home</a></li>
             <li><a href="../oQueConstruir/oQueConstruir.php">O que quer construir?</a></li>

@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<?php
+include("../verifica_login.php")
+?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/NavBar.css">
@@ -8,89 +8,100 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Calculadora de Areia por Metro Cúbico</title>
     <style>
-        /* Barra de navegação */
-        nav {
-            background-color: #004A8D;
-            width: 100%;
-            padding: 0 50px 0 30px;
-            position: fixed; /* Fixar no topo */
-            top: 0;
-            left: 0;
-            z-index: 1000; /* Para garantir que a barra fique no topo da camada */
-        }
+    /* Barra de navegação */
+    nav {
+        background-color: #004A8D;
+        width: 100%;
+        padding: 0 50px 0 30px;
+        position: fixed; /* Fixar no topo */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Para garantir que a barra fique no topo da camada */
+    }
 
-        nav .ajustaLogo {
-            display: flex;
-            align-items: center;
-        }
+    nav .ajustaLogo {
+        display: flex;
+        align-items: center;
+    }
 
+    nav .logo {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        margin-left: 10px;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            font-size: 18px;
-        }
+    nav ul li {
+        display: inline-block;
+    }
 
-        nav ul li a:hover, nav ul li a.active {
-            background-color: #002D5A; /* Um tom mais escuro de azul para hover */
-            border-radius: 5px;
-        }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        font-size: 18px;
+    }
 
-        /* Estilos para o corpo e o formulário */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding-top: 80px; /* Compensa o espaço da barra de navegação */
-        }
+    nav ul li a:hover, nav ul li a.active {
+        background-color: #002D5A; /* Um tom mais escuro de azul para hover */
+        border-radius: 5px;
+    }
 
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-        }
+    /* Estilos para o corpo e o formulário */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #99d3df; /* Nova cor de fundo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-top: 80px; /* Compensa o espaço da barra de navegação */
+    }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #004A8D;
-        }
+    .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+    }
 
-        input, select, button {
-            margin-top: 10px;
-            padding: 10px;
-            font-size: 16px;
-            width: 100%;
-            max-width: 300px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+    h1 {
+        margin-bottom: 20px;
+        color: #004A8D;
+    }
 
-        button {
-            background-color: #004A8D; /* Cor de fundo do botão */
-            color: white; /* Texto branco */
-            cursor: pointer;
-            border: none;
-            transition: background-color 0.3s;
-        }
+    input, select, button {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
 
-        button:hover {
-            background-color: #002D5A; /* Tom mais escuro de azul para hover */
-        }
+    button {
+        background-color: #004A8D; /* Cor de fundo do botão */
+        color: white; /* Texto branco */
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s;
+    }
 
-        h2 {
-            margin-top: 20px;
-            color: #004A8D;
-        }
-    </style>
+    button:hover {
+        background-color: #002D5A; /* Tom mais escuro de azul para hover */
+    }
+
+    h2 {
+        margin-top: 20px;
+        color: #004A8D;
+    }
+</style>
+
 </head>
 <body>
 

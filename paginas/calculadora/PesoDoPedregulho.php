@@ -1,3 +1,6 @@
+<?php
+include("../verifica_login.php")
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,6 +27,26 @@
             align-items: center;
         }
 
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+/* 
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        } */
+
+        nav ul li {
+            display: inline-block;
+        }
+
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -40,7 +63,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #99d3df;; /* Azul como fundo */
             display: flex;
             flex-direction: column;
             align-items: center;
