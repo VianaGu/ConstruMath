@@ -68,18 +68,18 @@ session_start();
                         <form action="cadastrar.php" method="POST">
                             <div class="field">
                                 <div class="control">
-                                    <input name="email" autocomplete="off" type="e-mail" class="input is-large" placeholder="Seu melhor e-mail" autofocus="">
+                                    <input id ="email" name="email" autocomplete="off" type="e-mail" class="input is-large" placeholder="Seu melhor e-mail" autofocus="">
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input name="usuario" autocomplete="off" name="text" class="input is-large" placeholder="Seu usuário" autofocus="">
+                                    <input id="usuario" name="usuario" autocomplete="off" name="text" class="input is-large" placeholder="Seu usuário" autofocus="">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input name="senha" class="input is-large" type="password" placeholder="Sua senha">
+                                    <input id="senha" name="senha" class="input is-large" type="password" placeholder="Sua senha">
                                 </div>
                             </div>
                             <button type="submit" class="button is-block is-link is-large is-fullwidth">Cadastrar</button>
@@ -90,6 +90,35 @@ session_start();
             </div>
         </div>
     </section>
+    <script>
+    // Função para lidar com a tecla Enter
+    function handleEnterKeyPress(event) {
+        // Verifica se a tecla pressionada é Enter
+        if (event.keyCode === 13) {
+            // Previne o comportamento padrão do formulário (submit)
+            event.preventDefault();
+
+            // Obtém o ID do elemento atual (campo focado)
+            var currentElementId = event.target.id;
+
+            // Verifica qual campo está focado atualmente e move para o próximo
+            if (currentElementId === "email") {
+                document.getElementById("usuario").focus(); // Corrigido aqui
+            } else if (currentElementId === "usuario") {
+                document.getElementById("senha").focus(); // Move para o campo de senha
+            } else if (currentElementId === "senha") {
+                // Se o campo de senha está focado, submete o formulário
+                event.target.closest("form").submit();
+            }
+        }
+    }
+
+    // Adiciona um listener para o evento keydown nos campos de entrada
+    document.getElementById("email").addEventListener("keydown", handleEnterKeyPress); // Corrigido aqui
+    document.getElementById("usuario").addEventListener("keydown", handleEnterKeyPress);
+    document.getElementById("senha").addEventListener("keydown", handleEnterKeyPress);
+</script>
+
 </body>
 
 </html>
