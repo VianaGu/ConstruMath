@@ -4,8 +4,9 @@ include("../verifica_login.php");
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta autor="Gustavo Viana">
     <link rel="stylesheet" href="../css/NavBar.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -18,11 +19,9 @@ include("../verifica_login.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Autor Gabriel caleffo -->
     <script>
-        
-
         function verificarCampo() {
-            var campo1 = document.getElementById('campo1').value;/* Entrada de qual tipo de construção */
-			var campo3 = document.getElementById ('campo3'); /* Campo de quantas portas Quantas portas? */
+            var campo1 = document.getElementById('campo1').value; /* Entrada de qual tipo de construção */
+            var campo3 = document.getElementById('campo3'); /* Campo de quantas portas Quantas portas? */
             var altura = document.getElementById('altura');
             var largura = document.getElementById('largura');
             var espessura = document.getElementById('espessura');
@@ -55,9 +54,9 @@ include("../verifica_login.php");
                     comprimento.style.display = 'none';
                     break;
             }
-           
+
         }
-        
+
         function calculaMetragemParede() {
             console.log('Entrou na função de cálculo');
 
@@ -81,15 +80,26 @@ include("../verifica_login.php");
 
             var multi;
             if (fqtd > 0) {
-                multi = (falt * flarg) - (1.68/* M² de uma porta de 80cm de largura */ * fqtd);
+                multi = (falt * flarg) - (1.68 /* M² de uma porta de 80cm de largura */ * fqtd);
             } else {
                 multi = (falt * flarg);
             }
+            // Definição das variáveis com os valores fornecidos
+            $cimento = 10.0; // kg/m²
+            $areia = 18.7; // kg/m²
+            $brita = 31.9; // kg/m²
+            $agua = 55.0; // kg/m²
 
+            // Calcula a quantidade de materiais
+            $cimento_total = $cimento * multiM2;
+            $areia_total = $areia * $area;
+            $brita_total = $brita * $area;
+            $agua_total = $agua * $area;
             // Exibir o resultado na página
             var resultM2Span = document.getElementById('resultM2');
             resultM2Span.textContent = multi.toFixed(2); // Exemplo de formatação, ajuste conforme necessário
         }
+
         function calculaMetragemPiso() {
             console.log('Entrou na função de cálculo piso');
 
@@ -121,7 +131,7 @@ include("../verifica_login.php");
             multiM3 = (flarg * fcom * fesp);
             //Exibir o resultado na página
             console.log("M³:" + multiM3);
-            
+
             var resultM3Span = document.getElementById('resultM3');
             resultM3Span.textContent = multiM3.toFixed(2);
         }
@@ -129,22 +139,23 @@ include("../verifica_login.php");
     <!-- Autor Gabriel caleffo -->
     <title>O Que Construir?</title>
 </head>
+
 <body>
     <!-- Navigation bar  -->
     <header>
         <nav>
-			<!-- logo -->
+            <!-- logo -->
             <div class="ajustaLogo">
                 <img src="../img\logo.jpg" alt="Logo" class="logoImg">
                 <a class="logo" href="../home/painel.php">ConstruMath</a>
             </div>
-			<!-- fim logo -->
-			<!-- Botão Mobile -->
+            <!-- fim logo -->
+            <!-- Botão Mobile -->
             <div class="menu-btn">
                 <i class="fa fa-bars fa-2x" onclick="menuShow();"></i>
             </div>
-			<!-- Botão Mobile -->
-			<!-- Lista de abas -->
+            <!-- Botão Mobile -->
+            <!-- Lista de abas -->
             <ul class="nav-list">
                 <!--  Links para proximas pag  -->
                 <li><a href="../home/painel.php">Home</a></li>
@@ -152,8 +163,8 @@ include("../verifica_login.php");
                 <li><a href="../materiais/materiais.php">Lista de Materiais</a></li>
                 <li><a href="../calculadora/calculadora.php">Calculadora</a></li>
                 <li><a href="../logout.php">Sair</a></li>
-            </ul> 
-			<!-- Fim Lista de abas -->
+            </ul>
+            <!-- Fim Lista de abas -->
         </nav>
     </header>
     <!-- End navigation bar -->
@@ -167,35 +178,35 @@ include("../verifica_login.php");
                 <!-- Piso  -->
                 <div id="larguraPiso" style="display:none;">
                     <label for="larguraPiso">Qual a largura?(Em metros): </label>
-                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura">
                 </div>
                 <div id="comprimento" style="display:none;">
                     <label for="comprimento">Qual a comprimento?:(Em metros) </label>
-                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura">
                 </div>
                 <div id="espessura" style="display:none;">
                     <label for="espessura">Qual a espessura?:(Em metros)</label>
                     <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="espessura">
                     <br><br>
-                <button type="button" onclick="calculaMetragemPiso()" value="Quantidade Material">Quantidade Material</button>
-                </div>    
+                    <button type="button" onclick="calculaMetragemPiso()" value="Quantidade Material">Quantidade Material</button>
+                </div>
                 <!-- fim piso  -->
                 <!-- Parede  -->
                 <div id="altura" style="display:none;">
                     <label for="altura">Qual a altura?:(Em metros) </label>
-                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qaltura">
                 </div>
                 <div id="largura" style="display:none;">
                     <label for="largura">Qual a largura?:(Em metros) </label>
-                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura"> 
+                    <input type="number" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="qlargura">
                 </div>
                 <div id="campo3" style="display:none;">
                     <label for="campo3">Tem portas? Quantas?: </label>
                     <input type="number" autocomplete="off" name="qtdPorta">
                     <label for="">Se não houver deixe em branco</label>
-                <!-- Fim Parede -->    
-                <br><br>
-                <button type="button" onclick="calculaMetragemParede()" value="Quantidade Material">Quantidade Material</button>
+                    <!-- Fim Parede -->
+                    <br><br>
+                    <button type="button" onclick="calculaMetragemParede()" value="Quantidade Material">Quantidade Material</button>
                 </div>
             </form>
             <!-- Autor Gabriel caleffo -->
@@ -220,7 +231,8 @@ include("../verifica_login.php");
             <span id="resultAgua"></span>
 
         </div>
-    </section> 
-    <script src="../js/mobile-navbar.js"></script>    
+    </section>
+    <script src="../js/mobile-navbar.js"></script>
 </body>
+
 </html>
