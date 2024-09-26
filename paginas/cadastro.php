@@ -37,7 +37,7 @@ session_start();
                     <?php 
                         if(isset($_SESSION['ja_cadastro'])):
                     ?>
-                    <div class="notification is-danger">
+                    <div class="notification is-warning">
                       <p>Esse Usuário já existe.</p>
                     </div>
                     <?php
@@ -57,7 +57,7 @@ session_start();
                     <?php 
                         if(isset($_SESSION['cadastrado'])):
                     ?>
-                    <div class="notification is-danger">
+                    <div class="notification is-success is-light">
                       <p>Usuário cadastrado com sucesso.</p>
                     </div>
                     <?php

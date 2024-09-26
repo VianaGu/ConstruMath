@@ -58,16 +58,16 @@ include('../verifica_login.php');
 				<div class="ptCreditos">
 					<ul class="creditos">
 						<li><a href="https://github.com/VianaGu" target="blank" class="name">Gustavo Viana</a></li>
-						<li><a href="#" target="blank" class="name">Gabriel Caleffo</a></li>
-						<li><a href="#" target="blank" class="name">Hugo</a></li>
+						<li><a href="https://instagram.com/biel_caleffo" target="blank" class="name">Gabriel Caleffo</a></li>
+						<li><a href="https://instagram.com/ghugo7895" target="blank" class="name">Hugo Rocha</a></li>
 					</ul>
 					<ul class="creditos">
-						<li><a href="#" target="blank" class="name">Kenzo</a></li>
+						<li><a href="https://instagram.com/rodrigo.kenzo" target="blank" class="name">Rodrigo Kenzo</a></li>
 						<li><a href="#" target="blank" class="name">Matheus Camargo</a></li>
 						<li><a href="#" target="blank" class="name">Eduardo Augusto</a></li>
 					</ul>
 					<ul class="creditos">
-						<li><a href="#" target="blank" class="name">Deivid</a></li>
+						<li><a href="https://instagram.com/romao_deivid" target="blank" class="name">Deivid Romao</a></li>
 						<li><a href="#" target="blank" class="name">Fabricio</a></li>
 						<li><a href="#" target="blank" class="name">Juan</a></li>
 					</ul>
