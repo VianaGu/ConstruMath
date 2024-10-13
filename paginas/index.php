@@ -17,6 +17,7 @@ session_start();
 </head>
 
 <body>
+
     <!-- Navigation bar  -->
     <header>
         <nav>
@@ -59,7 +60,9 @@ session_start();
                                 </div>
                             </div>
                             <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
+                            <a href="./recoverySenha.php">Esqueci a senha</a>
                         </form>
+                        
                     </div>
                     <h1 class="title"><a href="cadastro.php">Cadastrar</a></h1>
                 </div>
