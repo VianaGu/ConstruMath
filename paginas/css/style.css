@@ -1,81 +1,101 @@
-@charset "UTF-8";
-:root{
-	--color-bg:#99d3df;
-	--color-bg-box:#99d3df;
-	--color-text:#381EF7;
-	--colorNav: #004A8D;
-	--textColor: #fff;
-}
-body{
-	background: var(--color-bg);
-}
-.container {
-	width: 100%;
-	height: 93vh;
-	background: var(--color-bg);
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-.box {
-	background: var(--color-bg-box);
-	width: 60vw;
-	height: 80vh;
-	overflow-Y: hidden;
-	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
-}
-.apresenteSite{
-	font-size: 24px;
-	
-	letter-spacing: 4px;
-	text-align:center;
-	color:var(--color-text);
-	font-family: cambria;
-}
-.ptCreditos{
-	display: flex;
-	justify-content: space-evenly;
-}
-a.name{
-	color: black;
-}
-a.name:hover{
-	color: rgb(5, 139, 0);
-}
-.creditos{
-	list-style: none;
-	position:relative;
-	padding-left: 15px;
-	bottom:0;
+@charset "UTF-8"; /* Declaração de codificação de caracteres UTF-8 */
 
+/* Definição de variáveis de cores usadas no design */
+:root {
+	--color-bg: #99d3df; /* Cor de fundo principal */
+	--color-bg-box: #99d3df; /* Cor de fundo para caixas */
+	--color-text: #381EF7; /* Cor do texto */
+	--colorNav: #004A8D; /* Cor de fundo da navegação */
+	--textColor: #fff; /* Cor padrão do texto */
 }
+
+/* Estilo para o corpo da página */
 body {
-margin: 0px;
+	background: var(--color-bg); /* Usa a cor de fundo definida */
+	margin: 0px; /* Remove as margens padrão */
 }
+
+/* Container principal que centraliza o conteúdo */
+.container {
+	width: 100%; /* O container ocupa toda a largura */
+	height: 93vh; /* Define a altura do container */
+	background: var(--color-bg); /* Cor de fundo */
+	display: flex; /* Usa flexbox para alinhar o conteúdo */
+	flex-direction: row; /* Alinha os itens em linha */
+	justify-content: center; /* Centraliza os itens horizontalmente */
+	align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Caixa que contém o conteúdo principal */
+.box {
+	background: var(--color-bg-box); /* Cor de fundo da caixa */
+	width: 60vw; /* Largura da caixa */
+	height: 80vh; /* Altura da caixa */
+	overflow-y: hidden; /* Esconde o conteúdo que ultrapassa verticalmente */
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77); /* Sombra ao redor da caixa */
+}
+
+/* Estilo do texto de apresentação do site */
+.apresenteSite {
+	font-size: 24px; /* Tamanho da fonte */
+	letter-spacing: 4px; /* Espaçamento entre letras */
+	text-align: center; /* Centraliza o texto */
+	color: var(--color-text); /* Usa a cor de texto definida */
+	font-family: cambria; /* Fonte do texto */
+}
+
+/* Layout dos créditos, usando flexbox para espaçamento */
+.ptCreditos {
+	display: flex; /* Flexbox para alinhamento */
+	justify-content: space-evenly; /* Espaçamento uniforme entre os itens */
+}
+
+/* Estilo para os links com a classe 'name' */
+a.name {
+	color: black; /* Cor do texto dos links */
+}
+
+/* Efeito de hover para os links */
+a.name:hover {
+	color: rgb(5, 139, 0); /* Cor dos links ao passar o mouse */
+}
+
+/* Estilo para a lista de créditos */
+.creditos {
+	list-style: none; /* Remove os marcadores da lista */
+	position: relative; /* Define a posição relativa */
+	padding-left: 15px; /* Espaçamento à esquerda */
+	bottom: 0; /* Posiciona os créditos na parte inferior */
+}
+
+/* Estilo para o botão/link que leva ao topo da página */
 #linkTopo {
-    text-decoration: none;
-    color: #fff;
-    background-color: var(--colorNav);
-    padding: 10px;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 50%;
-	box-shadow: 0px 5px 4px rgba(50, 50, 50, 0.77);
-  }
-img{
-	margin-left:17%;
-	width:63%
+	text-decoration: none; /* Remove o sublinhado do link */
+	color: #fff; /* Cor do texto branca */
+	background-color: var(--colorNav); /* Cor de fundo da navegação */
+	padding: 10px; /* Espaçamento interno do botão */
+	position: fixed; /* Fixa o botão no canto inferior direito */
+	right: 10px; /* Distância da borda direita */
+	bottom: 10px; /* Distância da borda inferior */
+	border-radius: 50%; /* Forma arredondada */
+	box-shadow: 0px 5px 4px rgba(50, 50, 50, 0.77); /* Sombra ao redor do botão */
 }
+
+/* Estilo para imagens */
+img {
+	margin-left: 17%; /* Margem à esquerda para centralizar a imagem */
+	width: 63%; /* Largura da imagem */
+}
+
+/* Estilo para o rodapé */
 footer {
-  position: relative;
-  top:1px;
-  width: 100%;
-  height: 2.5rem;            /* altura do rodapé */
-}
-.rodape{
-	height: 5vh;
+	position: relative; /* Posição relativa para o rodapé */
+	top: 1px; /* Posição vertical */
+	width: 100%; /* Largura total do rodapé */
+	height: 2.5rem; /* Altura do rodapé */
 }
 
-
+/* Estilo adicional para a classe 'rodape' */
+.rodape {
+	height: 5vh; /* Define a altura do rodapé */
+}

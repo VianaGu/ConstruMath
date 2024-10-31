@@ -33,16 +33,7 @@ include("../verifica_login.php")
             text-decoration: none;
             margin-left: 10px;
         }
-/* 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        } */
-
+        
         nav ul li {
             display: inline-block;
         }

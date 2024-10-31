@@ -1,34 +1,39 @@
-div.navbar{
-    overflow: hidden;
-    background-color: #ccc;
-    position: fixed;
-    top:0;
-    width: 100%;
-    box-shadow: 5px, 5px, black;
-}
-div.navbar a{
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+/* Estilos para a barra de navegação */
+div.navbar {
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites da div */
+    background-color: #ccc; /* Cor de fundo cinza */
+    position: fixed; /* Fixa a barra de navegação no topo da página */
+    top: 0; /* Define a posição da barra no topo */
+    width: 100%; /* Faz com que a barra ocupe toda a largura da página */
+    box-shadow: 5px 5px black; /* Sombra ao redor da barra (corrigir vírgulas, deveriam ser espaços) */
 }
 
-div.navbar a.right{
-    float: right;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+/* Estilos para os links dentro da barra de navegação */
+div.navbar a {
+    float: left; /* Alinha os links à esquerda */
+    display: block; /* Exibe os links como blocos */
+    color: black; /* Cor do texto preta */
+    text-align: center; /* Centraliza o texto dentro do link */
+    padding: 14px 16px; /* Define o espaçamento interno do link */
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
-div.navbar img{
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 5px  16px;
-    text-decoration: none;
+/* Estilos para os links alinhados à direita dentro da barra de navegação */
+div.navbar a.right {
+    float: right; /* Alinha o link à direita */
+    display: block; /* Exibe o link como bloco */
+    color: black; /* Cor do texto preta */
+    text-align: center; /* Centraliza o texto dentro do link */
+    padding: 14px 16px; /* Define o espaçamento interno do link */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Estilos para as imagens dentro da barra de navegação */
+div.navbar img {
+    float: left; /* Alinha as imagens à esquerda */
+    display: block; /* Exibe as imagens como blocos */
+    color: black; /* Cor do texto preta (não afeta a imagem, mas sim o espaço ao redor) */
+    text-align: center; /* Centraliza o conteúdo relacionado à imagem */
+    padding: 5px 16px; /* Define o espaçamento interno ao redor da imagem */
+    text-decoration: none; /* Remove qualquer efeito de sublinhado (não aplicável à imagem) */
 }

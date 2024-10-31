@@ -1,213 +1,184 @@
 @charset "UTF-8";
-*{
+/* Especifica a codificação de caracteres como UTF-8 */
+
+/* Remove margem e padding de todos os elementos */
+* {
     margin: 0;
     padding: 0;
 }
-:root{
-	--colorNav: #004A8D;
-	--textColor: #fff;
+
+:root {
+	/* Variáveis de cores para fácil manutenção */
+	--colorNav: #004A8D; /* Cor da navegação */
+	--textColor: #fff;   /* Cor do texto */
 }
+
 a {
-  color: var(--textColor);
-  text-decoration: none;
-  transition: 0.3s;
+	/* Define a cor do texto dos links usando a variável --textColor */
+	/* Remove sublinhado de links e adiciona transição suave de 0.3s */
+	color: var(--textColor);
+	text-decoration: none;
+	transition: 0.3s;
 }
 
 a:hover {
-  opacity: 0.7;
+	/* Adiciona um efeito de opacidade ao passar o mouse sobre os links */
+	opacity: 0.7;
 }
 
 .logo {
-    font-size: 24px;
-	  color:#fff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-	  background-color: var(--colorNav);
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  .logoImg {
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    margin: 10px;
-  }
-  
-  
-  .ajustaLogo{ 
-    display: flex;
-    justify-content: space-around;
-    align-items: inherit;
-    font-family: 'Poppins', sans-serif;
-    background: var(--colorNav);
-    height: 8vh;
-    margin-left: -15vh;
-  }
-  
-  
-  nav {
-    display: flex;
-    height: 80px;
-    background-color: var(--colorNav);
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 50px 0 100px;
-    flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif;
-    z-index: 1;
-  }
-  
-  
-  .nav-list  {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 2;
-	
-  }
-  
-  .nav-list li {
-    margin: 0 5px;
-  }
-  
-  .nav-list li a{
-    text-decoration: none;
-	
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  
-  
-  .nav-list li a.active,
-  .nav-list li a:hover{
-      background: #6d6c6c;
-  }
-  
-  .nav-list li a.cadastro.active,
-  .nav-list li a.cadastro:hover{
-      background: #000;
-  }
-  nav .menu-btn i{
-    color: #000;
-    cursor: pointer;
-    display: none;
-  }
-  /* fim barra de nav */
-
-  @media (max-width: 999px) {
-
-  body{
-    overflow-x: hidden;
-  }
-
-  .logo{
-    font-size: 17px;
-  }
-  .ajustaLogo{ 
-    display: flex;
-    justify-content: space-around;
-    align-items: inherit;
-    font-family: 'Poppins', sans-serif;
-    background: var(--colorNav);
-    height: 8vh;
-    margin-left: -7vh;
-  }
-  .logoImg {
-    display: none;
-  }
-  nav .menu-btn i{
-    display: block;
-  }
-   nav .nav-list{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background-color: var(--colorNav);
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block !important;
-    transition: all 0.3s ease;
-  }
-  nav ul.open{
-    left: 0;
-    z-index: 2;
-  }
-
-  .nav-list li{
-    width: 100%;
-    margin: 50px 0;
-  }
-
-  .nav-list li a{
-    font-size: 23px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover{
-      background: none;
-      color: #928d8d;
-  }
+	/* Estilos para o logotipo: fonte maior, texto em maiúsculas e espaçamento */
+	font-size: 24px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	background-color: var(--colorNav);
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
+.logoImg {
+	/* Estiliza a imagem do logotipo com altura e largura iguais, formato circular */
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	margin: 10px;
+}
 
+.ajustaLogo { 
+	/* Ajusta o layout do logotipo para alinhamento flexível e responsivo */
+	display: flex;
+	justify-content: space-around;
+	align-items: inherit;
+	font-family: 'Poppins', sans-serif;
+	background: var(--colorNav);
+	height: 8vh;
+	margin-left: -15vh;
+}
 
+nav {
+	/* Estilos para a barra de navegação: layout flexível, altura, cores e padding */
+	display: flex;
+	height: 80px;
+	background-color: var(--colorNav);
+	align-items: center;
+	justify-content: space-around;
+	padding: 0 50px 0 100px;
+	flex-wrap: wrap;
+	font-family: 'Poppins', sans-serif;
+	z-index: 1;
+}
 
+.nav-list {
+	/* Remove marcadores da lista e usa layout flexível */
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	z-index: 2;
+}
 
+.nav-list li {
+	/* Define o espaçamento entre os itens da lista */
+	margin: 0 5px;
+}
+
+.nav-list li a {
+	/* Estilos para os links na lista de navegação: tamanho de fonte, padding, etc. */
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 15px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+
+.nav-list li a.active,
+.nav-list li a:hover {
+	/* Adiciona fundo escuro aos links ativos ou ao passar o mouse */
+	background: #6d6c6c;
+}
+
+.nav-list li a.cadastro.active,
+.nav-list li a.cadastro:hover {
+	/* Fundo preto específico para links da classe .cadastro */
+	background: #000;
+}
+
+nav .menu-btn i {
+	/* Estilos para o ícone de menu que aparece em dispositivos menores */
+	color: #000;
+	cursor: pointer;
+	display: none;
+}
+
+/* Estilos para telas menores (máx. 999px) */
 @media (max-width: 999px) {
 
-    body{
-      overflow-x: hidden;
-    }
-  
-    .logo{
-      font-size: 17px;
-    }
-    .ajustaLogo{ 
-      display: flex;
-      justify-content: space-around;
-      align-items: inherit;
-      font-family: 'Poppins', sans-serif;
-      background: var(--colorNav);
-      height: 8vh;
-      margin-left: -7vh;
-    }
-    .logoImg {
-      display: none;
-    }
-    nav .menu-btn i{
-      display: block;
-    }
-     nav .nav-list{
-      position: fixed;
-      top: 80px;
-      left: -100%;
-      background-color: var(--colorNav);
-      height: 100vh;
-      width: 100%;
-      text-align: center;
-      display: block ;
-      transition: all 0.3s ease;
-    }
-    nav ul.open{
-      left: 0;
-    }
-  
-    .nav-list li{
-      width: 100%;
-      margin: 50px 0;
-    }
-  
-    .nav-list li a{
-      font-size: 23px;
-    }
-    nav ul li a.active,
-    nav ul li a:hover{
-        background: none;
-        color: #928d8d;
-    }
-  }
+	body {
+		/* Impede o scroll horizontal em telas pequenas */
+		overflow-x: hidden;
+	}
+
+	.logo {
+		/* Reduz o tamanho da fonte do logotipo */
+		font-size: 17px;
+	}
+
+	.ajustaLogo { 
+		/* Ajusta o layout da logo para dispositivos menores */
+		display: flex;
+		justify-content: space-around;
+		align-items: inherit;
+		background: var(--colorNav);
+		height: 8vh;
+		margin-left: -7vh;
+	}
+
+	.logoImg {
+		/* Esconde a imagem do logotipo em dispositivos menores */
+		display: none;
+	}
+
+	nav .menu-btn i {
+		/* Exibe o ícone de menu em telas menores */
+		display: block;
+	}
+
+	nav .nav-list {
+		/* Faz a barra de navegação ocupar a tela inteira em dispositivos móveis */
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		background-color: var(--colorNav);
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		display: block !important;
+		transition: all 0.3s ease;
+	}
+
+	nav ul.open {
+		/* Quando o menu está aberto, a lista se posiciona no centro */
+		left: 0;
+		z-index: 2;
+	}
+
+	.nav-list li {
+		/* Aumenta o espaçamento entre os itens da lista em telas menores */
+		width: 100%;
+		margin: 50px 0;
+	}
+
+	.nav-list li a {
+		/* Aumenta o tamanho da fonte dos links em dispositivos móveis */
+		font-size: 23px;
+	}
+
+	nav ul li a.active,
+	nav ul li a:hover {
+		/* Remove o fundo e muda a cor do texto ao passar o mouse */
+		background: none;
+		color: #928d8d;
+	}
+}

@@ -1,85 +1,89 @@
-/* Reset básico para manter consistência */
+/* Remove margens e espaçamentos de todos os elementos e define a fonte padrão */
 * {
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-/* Corpo da página *
-/* Estilo do formulário */
+
+/* Estilos para a seção com layout flexível */
 section.cntflex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Layout flexível para organizar os itens */
+    flex-wrap: wrap; /* Permite que os itens "quebrem" para a próxima linha */
+    justify-content: space-between; /* Distribui o espaço uniformemente entre os itens */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo branco */
+    margin-top: 20px; /* Espaço superior */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve para o contorno */
 }
 
+/* Estilos para os itens op1 e op2 dentro do layout flexível */
 .op1, .op2 {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
-	font-weight: bold;
+    flex: 1; /* Faz com que os itens ocupem o mesmo espaço */
+    min-width: 200px; /* Define a largura mínima dos itens */
+    margin-bottom: 20px; /* Espaçamento inferior entre os itens */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilos para o formulário */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Organiza os itens do formulário verticalmente */
 }
 
+/* Estilos para os rótulos do formulário */
 form label {
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 5px; /* Espaçamento inferior entre o rótulo e o campo */
+    font-weight: bold; /* Rótulo em negrito */
 }
 
+/* Estilos para os campos de entrada de texto e número */
 form input[type="text"],
 form input[type="number"] {
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 50%;
+    padding: 8px; /* Espaçamento interno nos campos */
+    margin-bottom: 15px; /* Espaçamento inferior entre os campos */
+    border: 1px solid #ddd; /* Borda leve ao redor dos campos */
+    border-radius: 4px; /* Bordas arredondadas */
+    width: 50%; /* Largura dos campos (50% do contêiner) */
 }
 
+/* Estilos para o botão de envio do formulário */
 form button {
-    background-color: #ffa500;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
+    background-color: #ffa500; /* Cor de fundo laranja */
+    color: #fff; /* Cor do texto branca */
+    border: none; /* Remove a borda padrão */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor */
 }
 
+/* Estilos para o botão ao passar o mouse */
 form button:hover {
-    background-color: #e69500;
+    background-color: #e69500; /* Altera a cor de fundo ao passar o mouse */
 }
 
+/* Estilos para o elemento de resultado */
 #resultado {
-	
-    font-weight: bold;
-    color: #333;
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor do texto escura */
 }
 
-/* Botão de voltar ao topo */
+/* Estilos para o link de retorno ao topo */
 #linkTopo {
-    display: block;
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    display: block; /* Exibe o elemento como bloco */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do botão em relação à parte inferior da tela */
+    right: 20px; /* Distância do botão em relação à parte direita da tela */
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto branca */
+    text-align: center; /* Alinhamento central do texto */
+    line-height: 40px; /* Alinhamento vertical do texto */
+    border-radius: 50%; /* Forma circular */
+    font-size: 1.5em; /* Tamanho da fonte */
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor */
 }
-
-

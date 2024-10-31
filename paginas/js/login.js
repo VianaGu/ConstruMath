@@ -1,79 +1,88 @@
+// Seleciona todos os campos do formulário que possuem o atributo "required"
 const fields = document.querySelectorAll("[required]");
 
+// Função principal para validar um campo específico
 function ValidateField(field) {
-    // logica para verificar se existem erros
+
+    // Função interna que verifica se há algum erro de validade no campo
     function verifyErrors() {
         let foundError = false;
 
+        // Itera sobre as propriedades de "field.validity" para verificar qual erro ocorreu
         for(let error in field.validity) {
-            // se não for customError
-            // então verifica se tem erro
+            // Se o campo tiver algum erro e não for considerado "válido" no geral, salva o erro encontrado
             if (field.validity[error] && !field.validity.valid ) {
-                foundError = error
+                foundError = error;
             }
         }
-        return foundError;
+        return foundError; // Retorna o erro encontrado (ou false se não houver erros)
     }
-    /* mensagens customizadas  */
+
+    // Função interna que define mensagens personalizadas para cada tipo de erro
     function customMessage(typeError) {
+        // Dicionário com mensagens específicas para tipos de campo "text" e "password"
         const messages = {
             text: {
-                valueMissing: "Usuário Inválido"
+                valueMissing: "Usuário Inválido" // Mensagem se o campo "text" estiver vazio
             },
             password: {
-                valueMissing: "Não se esqueça da senha"
+                valueMissing: "Não se esqueça da senha" // Mensagem se o campo "password" estiver vazio
             }
         }
 
-        return messages[field.type][typeError]
+        // Retorna a mensagem correspondente ao tipo de erro para o tipo de campo atual
+        return messages[field.type][typeError];
     }
 
-    /* setando mensagem que será mostrada  */
+    // Função interna que exibe ou remove a mensagem de erro personalizada
     function setCustomMessage(message) {
-        const spanError = field.parentNode.querySelector("span.error")
+        // Seleciona o elemento <span> que exibirá a mensagem de erro
+        const spanError = field.parentNode.querySelector("span.error");
         
         if (message) {
-            spanError.classList.add("active")
-            spanError.innerHTML = message
+            // Se houver uma mensagem, ativa a classe "active" e insere a mensagem no <span>
+            spanError.classList.add("active");
+            spanError.innerHTML = message;
         } else {
-            spanError.classList.remove("active")
-            spanError.innerHTML = ""
+            // Se não houver mensagem (validação passou), remove a classe "active" e limpa o <span>
+            spanError.classList.remove("active");
+            spanError.innerHTML = "";
         }
     }
 
+    // Retorna uma função que é executada ao validar o campo
     return function() {
-
-        const error = verifyErrors()
+        const error = verifyErrors(); // Verifica se há erros
 
         if(error) {
-            const message = customMessage(error)
+            const message = customMessage(error); // Obtém a mensagem de erro personalizada
 
-            field.style.borderColor = "red"
-            setCustomMessage(message)
+            field.style.borderColor = "red"; // Altera a borda do campo para vermelho se houver erro
+            setCustomMessage(message); // Exibe a mensagem de erro
         } else {
-            field.style.borderColor = "green"
-            setCustomMessage()
+            field.style.borderColor = "green"; // Altera a borda do campo para verde se estiver válido
+            setCustomMessage(); // Remove a mensagem de erro, se existir
         }
     }
 }
 
-
+// Função que é acionada em eventos de validação personalizados
 function customValidation(event) {
+    const field = event.target; // Obtém o campo que disparou o evento
+    const validation = ValidateField(field); // Cria a função de validação para o campo
 
-    const field = event.target
-    const validation = ValidateField(field)
-
-    validation()
-
+    validation(); // Executa a função de validação
 }
 
+// Adiciona eventos para cada campo obrigatório
 for( field of fields ){
+    // Previne o comportamento padrão do HTML5 ao detectar um campo inválido
     field.addEventListener("invalid", event => { 
-        // eliminar o bubble
-        event.preventDefault()
+        event.preventDefault(); // Impede a exibição padrão do erro
 
-        customValidation(event)
-    })
-    field.addEventListener("blur", customValidation)
+        customValidation(event); // Executa a validação customizada
+    });
+
+    // Adiciona a validação personalizada quando o campo perde o foco (evento "blur")
+    field.addEventListener("blur", customValidation);
 }
-

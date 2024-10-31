@@ -33,15 +33,6 @@ include("../verifica_login.php")
             text-decoration: none;
             margin-left: 10px;
         }
-/* 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        } */
 
         nav ul li {
             display: inline-block;
@@ -58,8 +49,6 @@ include("../verifica_login.php")
             background-color: #002D5A; /* Um tom mais escuro de azul para hover */
             border-radius: 5px;
         }
-
-        /* Estilos para o corpo e o conteúdo */
         /* Estilos para o corpo e o conteúdo */
         body {
             margin: 0;

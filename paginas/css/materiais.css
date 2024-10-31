@@ -1,52 +1,163 @@
 @charset "UTF-8";
-:root{
-	--color-bg:#99d3df;
-	--color-bg-box:#99d3df;
-	--color-text:#381EF7;
-	--colorNav: #004A8D;
-	--textColor: #fff;
+/* Especifica a codificação de caracteres como UTF-8 */
+
+:root {
+	/* Definição de variáveis de cores para fácil manutenção */
+	--color-bg: #99d3df; /* Cor de fundo geral */
+	--color-bg-box: #99d3df; /* Cor de fundo das caixas */
+	--color-text: #381EF7; /* Cor de texto primária */
+	--colorNav: #004A8D; /* Cor de navegação */
+	--textColor: #fff; /* Cor de texto em branco */
 }
 
-a.btn-nav{height: 40px; color: #ffffff;}
-a{cursor: pointer; font-weight: bold;}
-a.btn-nav:hover{color: #7fdce8;}
-.btn-nav-sair:hover{color: #ffffff;}
-.btn-nav-sair{color: #ffffff;}
-
-.neo-section{
-    min-height: 820px;
-    margin: 0; 
-    padding: 0px; 
-    box-sizing: border-box;    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding: 40px;
-    position: relative;
+a.btn-nav {
+	/* Estiliza links com a classe .btn-nav com altura de 40px e cor de texto branco */
+	height: 40px;
+	color: #ffffff;
 }
-.wm{width: 50%; float: left;}
-.clear{clear: both;}
-.center{text-align: center}
-.neo-container{max-width: 1280px; padding: 2% 2%; margin: 0 auto; margin-top: 200px;}
-.sombra{width: 100%; height: 100%; top: 0; left: 0; position: absolute; background: rgba(0,0,0,0.7); z-index: 100;}
+
+a {
+	/* Define o cursor como pointer para links e aplica fonte negrito */
+	cursor: pointer;
+	font-weight: bold;
+}
+
+a.btn-nav:hover {
+	/* Altera a cor dos links com a classe .btn-nav ao passar o mouse */
+	color: #7fdce8;
+}
+
+.btn-nav-sair:hover {
+	/* Mantém a cor branca ao passar o mouse em links com a classe .btn-nav-sair */
+	color: #ffffff;
+}
+
+.btn-nav-sair {
+	/* Define a cor de texto como branca para links com a classe .btn-nav-sair */
+	color: #ffffff;
+}
+
+.neo-section {
+	/* Estiliza a seção com altura mínima de 820px e define o fundo sem repetição */
+	min-height: 820px;
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding: 40px;
+	position: relative;
+}
+
+.wm {
+	/* Define a largura de elementos com a classe .wm como 50% e flutua à esquerda */
+	width: 50%;
+	float: left;
+}
+
+.clear {
+	/* Limpa flutuação (clear both) */
+	clear: both;
+}
+
+.center {
+	/* Centraliza o texto */
+	text-align: center;
+}
+
+.neo-container {
+	/* Define um container com largura máxima de 1280px, padding e margem automática */
+	max-width: 1280px;
+	padding: 2% 2%;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.sombra {
+	/* Cria uma camada de sombra com opacidade */
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+	z-index: 100;
+}
+
 .neo-section > .neo-container {
-    position: relative;
-    z-index: 105;
+	/* Garante que o conteúdo tenha prioridade visual sobre a sombra */
+	position: relative;
+	z-index: 105;
 }
-.texto-centro{color: #ffffff; font-size: 3em; font-family: 'Ubuntu'; font-weight: bold;}
-.btn-index{width: 280px; color: #fdfdfd; border-radius: 10px; border: 3px solid #7fdce8; padding: 20px;}
-.botoes{padding: 2% 15%;}
-.btn-index:hover{color: #eeeeee; background-color: rgb(127, 220, 232);}
-.rodape{color: #ffffff; background-color: #7fdce8; text-align: center; font-size: 0.80em;}
-.wm a{text-decoration: none;}
-.d-grid{font-weight: bold; padding-top: 20px; text-align: center}
 
-body{
-    background-color: var(--color-bg);
+.texto-centro {
+	/* Estiliza o texto centralizado com cor branca, tamanho de 3em e fonte 'Ubuntu' */
+	color: #ffffff;
+	font-size: 3em;
+	font-family: 'Ubuntu';
+	font-weight: bold;
+}
+
+.btn-index {
+	/* Estiliza botões com largura de 280px, cor branca, borda arredondada e padding */
+	width: 280px;
+	color: #fdfdfd;
+	border-radius: 10px;
+	border: 3px solid #7fdce8;
+	padding: 20px;
+}
+
+.botoes {
+	/* Aplica padding personalizado ao contêiner de botões */
+	padding: 2% 15%;
+}
+
+.btn-index:hover {
+	/* Muda a cor e o fundo dos botões ao passar o mouse */
+	color: #eeeeee;
+	background-color: rgb(127, 220, 232);
+}
+
+.rodape {
+	/* Define a cor do texto e fundo para o rodapé, centralizando o conteúdo */
+	color: #ffffff;
+	background-color: #7fdce8;
+	text-align: center;
+	font-size: 0.80em;
+}
+
+.wm a {
+	/* Remove sublinhado de links dentro de elementos com a classe .wm */
+	text-decoration: none;
+}
+
+.d-grid {
+	/* Estiliza texto centralizado e com padding no topo */
+	font-weight: bold;
+	padding-top: 20px;
+	text-align: center;
+}
+
+body {
+	/* Aplica a cor de fundo definida na variável --color-bg */
+	background-color: var(--color-bg);
 }
 
 @media screen and (max-width: 667px) {
+	/* Estilos para telas pequenas (até 667px de largura) */
+	.wm {
+		/* Altera a largura dos elementos .wm para 100% em telas pequenas */
+		width: 100%;
+	}
 
-    .wm{width: 100%;}
-    nav{height: 100%;}
-    .neo-container{margin-top: 120px;}
+	nav {
+		/* Ajusta a altura do menu de navegação para telas menores */
+		height: 100%;
+	}
+
+	.neo-container {
+		/* Diminui a margem superior para 120px em dispositivos menores */
+		margin-top: 120px;
+	}
 }
