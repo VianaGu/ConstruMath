@@ -1,45 +1,75 @@
 # ConstruMath
-Projeto desenvolvido no 3º/4º semestre do curso de Analise e Desenvolvimento de Sistemas
 
-Objetivos do projeto:
-- Deve fazer cálculos matemáticos 
-- Descrever quais materiais necessesarios e suas quantidade para construção pré determinada
-- Definir um orçamento médio para realização da obra
+> Projeto desenvolvido no 3º/4º semestre do curso de Análise e Desenvolvimento de Sistemas.
 
-Etapas:
-- Realizar topicos de discução(#p2 #p3 #p4)
-- Desenvolver código
-- Desenvolver a estrutura para o site
-- Estrutura de Dados(Ex: nome das tabelas, coisas que a tabela precisa ter)
-- Desenvolver o estilo(css)
-- Desenvolver um design
-- Desenvolver um Slogan
+## 📌 Objetivos do Projeto
+- Executar cálculos matemáticos para áreas ou volumes.
+- Estimar os materiais necessários para construções (quantidade e tipo).
+- Gerar um orçamento médio para execução da obra.
 
-Requisitos:
-- Formulas de cálculo de máterial
-- Banco de dados 
-- Lista de máteriais
-- Campos para avaliação
-<br>
-<br>
-<br>
+## 🛠️ Etapas do Desenvolvimento
+1. Discussão em equipe sobre os requisitos (tópicos #p2, #p3, #p4).
+2. Implementação do código.
+3. Planejamento da estrutura do site.
+4. Definição da Estrutura de Dados (ex: nomes de tabelas e campos no banco).
+5. Desenvolvimento do layout com CSS.
+6. Criação de um design visual e identidade.
+7. Elaboração de um slogan impactante.
 
-Cor da NavBar = #004A8D
+## 📋 Requisitos Técnicos
+- Fórmulas para cálculo de materiais.
+- Banco de dados para armazenamento (MySQL ou similar).
+- Listagem de materiais necessários.
+- Campos para avaliação ou feedback do usuário.
 
-<br>
-Para rodar o site:
-<br>
-1.Abra o administrador de banco de dados do seu computador 
-<br>
-2.Abra o arquivo <a href="./paginas/CriarDatabase.sql">CriarDatabase.sql </a> e rode no seu computador 
-<br>
-3.Inicie um servidor apache com xampp ou wampp
-<br>
-4.Abra seu navegador e entre em 'localhost/paginas/'
-<br>
-<br>
-<br>
-Caso você tenha esse erro:<br><br>
-'Fatal error: Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\ConstruMath\paginas\conexao.php:7 Stack trace: #0 C:\xampp\htdocs\ConstruMath\paginas\conexao.php(7): mysqli_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'login') #1 C:\xampp\htdocs\ConstruMath\paginas\login.php(3): include('C:\\xampp\\htdocs...') #2 {main} thrown in C:\xampp\htdocs\ConstruMath\paginas\conexao.php on line 7'
-<br>
-basta alterar as credenciais <a href="./paginas/conexao.php">aqui</a>
+## 🚀 Funcionalidades de Configuração & Execução
+1. Abra seu gerenciador de banco de dados (phpMyAdmin, MySQL Workbench etc.).
+2. Execute o script `CriarDatabase.sql` para criar a base de dados.
+3. Inicie um servidor local (XAMPP, WAMP ou equivalente).
+4. Acesse no navegador: `http://localhost/paginas/`.
+
+### ⚠️ Caso ocorra um erro como este:
+```
+Fatal error: Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in ...
+```
+Basta ajustar as credenciais de conexão no arquivo de configuração (como `conexao.php`), editando usuário, senha e nome do banco conforme seu ambiente local.
+
+---
+
+## 📖 Sobre o Projeto
+Desenvolvido durante o curso como parte do terceiro ou quarto semestre, este projeto demonstra o aprendizado em lógica, banco de dados e desenvolvimento web — juntando teoria e prática.
+
+---
+
+## 💻 Tecnologias Utilizadas
+- PHP
+- MySQL
+- CSS
+- JavaScript  
+
+---
+
+## 📂 Estrutura do Repositório 
+```
+/
+├── Diagramas/           # Diagramas do sistema (drawio ou similares)
+├── Exemplos/            # Exemplos de uso ou de dados
+├── Prints Do Protótipo/ # Imagens ou prints do protótipo visual
+├── miscelânea/          # Arquivos variados
+├── paginas/             # Páginas frontend (HTML, PHP, CSS, JS)
+├── CriarDatabase.sql    # Script de criação do banco de dados
+├── README.md            # README atual (você está aqui)
+└── LICENSE              # Se houver licença a ser aplicada
+```
+
+---
+
+## 🤝 Como Colaborar
+Quer sugerir melhorias, correções ou novas funcionalidades?  
+Fique à vontade para abrir uma *issue* ou enviar um *Pull Request*. Todo feedback é super bem-vindo!
+
+---
+
+## ⭐ Gostou?
+Se curtiu o projeto, dê uma estrelinha ⭐ no repositório!  
+Acho que seria ótimo trocar ideias sobre lógica, cálculos, banco de dados ou design também — estou por aqui!
